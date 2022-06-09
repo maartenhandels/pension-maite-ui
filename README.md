@@ -1,1 +1,1 @@
-# pension-maite-ui
+# Frontend Project for Pension Maite
