@@ -1,0 +1,16 @@
+.LanguagePicker {
+    color: black;
+}
+
+.icon {
+    margin-right: 0.5rem;
+}
+
+.header:hover {
+    cursor: pointer;
+}
+
+.items {
+    padding: 0;
+    position: absolute;
+}

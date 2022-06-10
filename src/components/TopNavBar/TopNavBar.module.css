@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+    margin-right: 5rem;
+}
+
+.reservationIcon {
+    margin-right: 0.5rem;
+}
