@@ -1,0 +1,48 @@
+.Container {
+    color: black;
+	position: relative;
+	top: -4rem;
+    z-index: 2;
+    
+}
+
+.Card {
+    width: 80%;
+    padding: 1.25rem;
+}
+
+.Form {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.FormField {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 15rem;
+}
+
+.FormField > * {
+    padding: 0.5rem;
+}
+
+.FormField > label {
+    text-align: left;
+    font-weight: bold;
+    color: #5A7CE2;
+}
+
+.SearchBtn {
+    border-radius: 20px;
+	color: #5A7CE2;
+	border-color: #5A7CE2;
+    font-weight: bold;
+    width: 15rem;
+}
+
+.SearchBtn:hover {
+    background-color: #5A7CE2;
+    color: white;
+}
