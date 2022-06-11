@@ -1,16 +1,25 @@
 .LanguagePicker {
-    color: black;
+    /* color: white; */
+    z-index: 2;
 }
 
 .icon {
     margin-right: 0.5rem;
 }
 
-.header:hover {
-    cursor: pointer;
+.header {
+    color: white;
 }
 
-.items {
+.header:hover {
+    cursor: pointer;
+    color:aqua;
+}
+
+.LanguageOptions {
     padding: 0;
     position: absolute;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 1;
 }

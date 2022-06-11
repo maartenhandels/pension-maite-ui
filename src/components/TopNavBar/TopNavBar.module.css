@@ -8,3 +8,11 @@
 .reservationIcon {
     margin-right: 0.5rem;
 }
+
+.ReservationBtn {
+    color: white;
+}
+
+.ReservationBtn:hover {
+    color: aqua;
+}

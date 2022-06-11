@@ -53,7 +53,8 @@
 }
 
 .BookBtn:hover span {
-    padding-right: 25px;    
+    padding-right: 25px;  
+    color: white;  
 }
 
 .BookBtn:hover span:after {

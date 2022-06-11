@@ -10,7 +10,7 @@ import Button from "../UI/Button/Button";
 const TopNavBar = () => {
   return (
     <div className={classes.container}>
-      <Button>
+      <Button className={classes.ReservationBtn}>
         <FontAwesomeIcon
           className={classes.reservationIcon}
           icon={faSuitcaseRolling}

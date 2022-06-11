@@ -1,0 +1,30 @@
+.Image {
+	height: 600px;
+	width: 100%;
+}
+
+.Content {
+	top: 35%;
+    font-family: 'AirbnbCereal';
+}
+
+.Header {
+    font-size: 5rem;
+}
+
+.Text {
+    font-size: 2.5rem;
+}
+
+.Button {
+    background-color: #5A7CE2;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    padding: 1rem 4rem;
+}
+
+.Button:hover {
+    color:antiquewhite;
+}

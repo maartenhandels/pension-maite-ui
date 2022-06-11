@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'AirbnbCereal';
+  src: local('AirbnbCereal'),
+       url('../public/fonts/AirbnbCereal/AirbnbCerealLight.ttf') format("truetype");
+}
+
 .App {
   text-align: center;
 }

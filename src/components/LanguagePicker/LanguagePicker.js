@@ -41,7 +41,7 @@ const LanguagePicker = () => {
         <FontAwesomeIcon className={classes.icon} icon={faGlobe} />
         Idioma
       </Button>
-      <ul className={classes.items}>
+      <ul className={classes.LanguageOptions}>
         {isOpen &&
           languages.map((lang) => (
             <LanguageOption
