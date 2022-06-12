@@ -1,0 +1,28 @@
+.Description > * {
+    margin: 0 2rem;
+}
+
+.DescriptionImage {
+    height: 500px;
+}
+
+.DescriptionText > h4 {
+    font-size: 30px;
+	font-weight: bold;
+	color: #5A7CE2;
+	margin-bottom: 30px;
+	width: 100%;
+   	text-align: center;
+   	border-bottom: 1px solid #DEDEDE;
+   	line-height: 0.1em;
+}
+
+.DescriptionText > h4 > span {
+    background:#F7F7F7;
+    padding:0 10px;
+}
+
+.DescriptionText > p {
+    text-align: justify; 
+    line-height: 175%;
+}

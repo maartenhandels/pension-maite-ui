@@ -1,0 +1,45 @@
+.MoveBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2rem;
+    width: 20px;
+    background-color: #4586FF;
+    color: white;
+    font-weight: bold;
+}
+
+.GoogleReview {
+    display: flex;
+    position: relative;
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+
+.Card {
+    margin: 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-width: 25rem;
+}
+
+.User {
+    text-align: left;
+}
+
+.Stars {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.Icon {
+    width: 15px; 
+    height: 15px;
+    margin: 0 1rem;
+}
+
+.Comment {
+    text-align: justify;
+}

@@ -1,0 +1,21 @@
+.GoogleScore {
+    display: flex;
+    flex-direction: column;
+    min-width: 11rem;
+}
+
+.GoogleScore > * {
+   margin: 0.2rem 0;
+}
+
+.Image {
+    height: 40px;
+}
+
+.Stars > p {
+    margin: 0;
+}
+
+.Text span {
+    width: 50px;
+}
