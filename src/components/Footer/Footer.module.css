@@ -1,0 +1,43 @@
+.Footer {
+    margin-top: 60px;
+	background-color: #222222;
+	color: #A8ACB3;
+    /* display: flex; */
+}
+
+.TopSection {
+    padding: 2rem 0;
+}
+
+.Header {
+    font-family: 'Oleo Script', cursive;
+}
+
+.TextSeparator {
+    color: #A8ACB3; 
+    margin-left: 10px; 
+    margin-right: 10px;
+}
+
+.Link {
+    color: #A8ACB3;
+    text-decoration: none;
+}
+
+.Link:hover {
+    color: #A8ACB3;
+    text-decoration: none;
+}
+
+.LineSeparator {
+    background-color: #A8ACB3;
+    margin: 0;
+}
+
+.BottomSection {
+    padding: 1rem 0;
+}
+
+.BottomSection > p {
+    margin: 0;
+}

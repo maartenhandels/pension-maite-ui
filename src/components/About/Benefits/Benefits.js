@@ -8,9 +8,9 @@ import {
   faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
-import FlexCenter from "../../containers/FlexCenter/FlexCenter";
+import FlexCenter from "../../../containers/FlexCenter/FlexCenter";
 import BenefitsItem from "./BenefitsItem/BenefitsItem";
-import Header from "../UI/Header/Header";
+import Header from "../../UI/Header/Header";
 
 const Benefits = () => {
   const benefits = [

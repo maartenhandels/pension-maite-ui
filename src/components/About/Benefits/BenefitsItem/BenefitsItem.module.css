@@ -22,11 +22,11 @@
 
 .Icon {
     height: 5rem;
-    color: #4586FF;
+    color: var(--primary-color);
 }
 
 .Header {
-    color: #4586FF;
+    color: var(--primary-color);
     font-weight: bold; 
 }
 

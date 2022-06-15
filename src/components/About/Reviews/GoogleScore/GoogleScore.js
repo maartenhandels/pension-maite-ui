@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as fasFaStar } from "@fortawesome/free-solid-svg-icons";
 import { faStar as farFaStar } from "@fortawesome/free-regular-svg-icons";
 
-import FlexCenter from "../../../containers/FlexCenter/FlexCenter";
+import FlexCenter from "../../../../containers/FlexCenter/FlexCenter";
 
 const GoogleScore = () => {
   return (

@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 import { Carousel } from "react-bootstrap";
-import Card from "../../UI/Card/Card";
-import FlexCenter from "../../../containers/FlexCenter/FlexCenter";
-import Button from "../../UI/Button/Button";
+import Card from "../../../UI/Card/Card";
+import FlexCenter from "../../../../containers/FlexCenter/FlexCenter";
+import Button from "../../../UI/Button/Button";
 
 const GoogleReview = ({ reviews }) => {
   const maxScrollWidth = useRef(0);

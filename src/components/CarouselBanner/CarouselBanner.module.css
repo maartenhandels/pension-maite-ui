@@ -17,7 +17,7 @@
 }
 
 .Button {
-    background-color: #5A7CE2;
+    background-color: var(--primary-color);
     color: white;
     font-size: 1.5rem;
     font-weight: bold;

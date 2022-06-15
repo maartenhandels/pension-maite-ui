@@ -1,7 +1,7 @@
 .Header {
     font-size: 2rem;
     font-weight: bold;
-    color: #5A7CE2;
+    color: var(--primary-color);
     margin: 2rem 0rem;
     border-bottom: 1px solid #DEDEDE;
     line-height: 0.1em;

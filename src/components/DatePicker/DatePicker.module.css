@@ -31,18 +31,18 @@
 .FormField > label {
     text-align: left;
     font-weight: bold;
-    color: #5A7CE2;
+    color: var(--primary-color);
 }
 
 .SearchBtn {
     border-radius: 20px;
-	color: #5A7CE2;
-	border-color: #5A7CE2;
+	color: var(--primary-color);
+	border-color: var(--primary-color);
     font-weight: bold;
     width: 15rem;
 }
 
 .SearchBtn:hover {
-    background-color: #5A7CE2;
+    background-color: var(--primary-color);
     color: white;
 }

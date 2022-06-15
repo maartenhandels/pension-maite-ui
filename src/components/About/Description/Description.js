@@ -2,8 +2,8 @@ import React from "react";
 
 import classes from "./Description.module.css";
 
-import FlexCenter from "../../containers/FlexCenter/FlexCenter";
-import Header from "../UI/Header/Header";
+import FlexCenter from "../../../containers/FlexCenter/FlexCenter";
+import Header from "../../UI/Header/Header";
 
 const Description = () => {
   return (

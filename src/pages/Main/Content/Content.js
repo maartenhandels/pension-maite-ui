@@ -4,7 +4,7 @@ import classes from "./Content.module.css";
 
 import CarouselBanner from "../../../components/CarouselBanner/CarouselBanner";
 import DatePicker from "../../../components/DatePicker/DatePicker";
-import About from "./About/About";
+import About from "../../../components/About/About";
 
 const Content = () => {
   return (

@@ -25,7 +25,7 @@
 
 .BookBtn {
     border-radius: 4px;
-    background-color: #5A7CE2;
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
     font-size: 1.25rem;
