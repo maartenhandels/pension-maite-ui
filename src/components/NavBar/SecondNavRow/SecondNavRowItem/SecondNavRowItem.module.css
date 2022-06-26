@@ -3,9 +3,16 @@
 	color: white;
     margin: 0 1rem;
     font-size: 1.2rem;
+    text-decoration: none;
 }
 
 .option:hover {
 	text-decoration: underline;
     cursor: pointer;
+    color: var(--primary-color);
+}
+
+.active {
+    color: var(--primary-color);
+    text-decoration: underline;
 }

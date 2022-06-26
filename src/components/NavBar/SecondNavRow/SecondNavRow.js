@@ -2,8 +2,9 @@ import React from "react";
 
 import classes from "./SecondNavRow.module.css";
 
-import NavItem from "./SecondNavRowItem/NavItem";
+import NavItem from "./SecondNavRowItem/SecondNavRowItem";
 import Button from "../../UI/Button/Button";
+import { siteMap } from "../../../Routes";
 
 const SecondNavRow = () => {
   const navItems = ["Inicio", "Habitaciones", "Ubicación", "Contacto"];
@@ -17,8 +18,12 @@ const SecondNavRow = () => {
           alt="logo"
         />
         <ul className={classes.NavItems}>
-          {navItems.map((item) => (
-            <NavItem key={item} label={item} />
+          {Object.keys(siteMap).map((key) => (
+            <NavItem
+              key={key}
+              label={siteMap[key].title}
+              path={siteMap[key].path}
+            />
           ))}
         </ul>
       </div>

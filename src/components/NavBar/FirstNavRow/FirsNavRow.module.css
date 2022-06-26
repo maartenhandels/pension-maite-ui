@@ -14,5 +14,5 @@
 }
 
 .ReservationBtn:hover {
-    color: aqua;
+    color: var(--primary-color);
 }
