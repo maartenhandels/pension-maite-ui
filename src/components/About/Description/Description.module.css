@@ -9,7 +9,7 @@
 .DescriptionText > h4 {
     font-size: 30px;
 	font-weight: bold;
-	color: #5A7CE2;
+	color: var(--primary-color);
 	margin-bottom: 30px;
 	width: 100%;
    	text-align: center;
@@ -18,7 +18,7 @@
 }
 
 .DescriptionText > h4 > span {
-    background:#F7F7F7;
+    background: var(--background-color);
     padding:0 10px;
 }
 

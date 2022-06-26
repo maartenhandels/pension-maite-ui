@@ -1,0 +1,49 @@
+.Map {
+    margin-top: 3rem;
+}
+
+.Content {
+    align-items: flex-start;
+}
+
+.Section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    margin: 3rem 1rem;
+}
+
+.GoogleMap {
+    width: 100%;
+}
+
+.Iframe {
+    width: 100%;
+    min-height: 25rem;
+}
+
+.AddressHeader {
+    /* font-size: 2rem; */
+    font-weight: bold;
+    /* margin-top: 2rem; */
+}
+
+.Address {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 1rem;
+
+}
+
+.Address > div {
+    margin: 0.5rem 0;
+}
+
+.AddressDescription {
+    margin-top: 1rem;
+    text-align: justify;
+}

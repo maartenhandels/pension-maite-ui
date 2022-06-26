@@ -3,13 +3,13 @@ import React from "react";
 import classes from "./Description.module.css";
 
 import FlexCenter from "../../../containers/FlexCenter/FlexCenter";
-import Header from "../../UI/Header/Header";
+import Header from "../../UI/SectionHeader/SectionHeader";
 
 const Description = () => {
   return (
     <FlexCenter className={classes.Description}>
       <img
-        className={`img-fluid ${classes.DescriptionImage}`}
+        className={classes.DescriptionImage}
         src="images/description/collage.png"
         alt="Pension maite donostia"
       />

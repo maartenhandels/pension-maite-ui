@@ -3,7 +3,7 @@ import React from "react";
 import classes from "./Reviews.module.css";
 
 import FlexCenter from "../../../containers/FlexCenter/FlexCenter";
-import Header from "../../UI/Header/Header";
+import Header from "../../UI/SectionHeader/SectionHeader";
 import GoogleScore from "./GoogleScore/GoogleScore";
 import GoogleReviews from "./GoogleReviews/GoogleReviews";
 

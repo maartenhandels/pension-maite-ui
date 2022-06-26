@@ -12,6 +12,6 @@
 }
 
 .Benefits > h3 > span {
-    background:#F7F7F7;
+    background: var(--background-color);
     padding:0 1.5rem;
 }

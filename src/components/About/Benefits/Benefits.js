@@ -10,7 +10,7 @@ import {
 
 import FlexCenter from "../../../containers/FlexCenter/FlexCenter";
 import BenefitsItem from "./BenefitsItem/BenefitsItem";
-import Header from "../../UI/Header/Header";
+import Header from "../../UI/SectionHeader/SectionHeader";
 
 const Benefits = () => {
   const benefits = [

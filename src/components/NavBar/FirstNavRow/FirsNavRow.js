@@ -1,13 +1,13 @@
 import React from "react";
 
-import classes from "./TopNavBar.module.css";
+import classes from "./FirsNavRow.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSuitcaseRolling } from "@fortawesome/free-solid-svg-icons";
 
-import LanguagePicker from "../LanguagePicker/LanguagePicker";
-import Button from "../UI/Button/Button";
+import LanguagePicker from "../../LanguagePicker/LanguagePicker";
+import Button from "../../UI/Button/Button";
 
-const TopNavBar = () => {
+const FirsNavRow = () => {
   return (
     <div className={classes.container}>
       <Button className={classes.ReservationBtn}>
@@ -22,4 +22,4 @@ const TopNavBar = () => {
   );
 };
 
-export default TopNavBar;
+export default FirsNavRow;

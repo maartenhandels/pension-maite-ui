@@ -1,15 +1,8 @@
-:root {
-  --primary-color: #4586FF;
-  --background-color: #F7F7F7;
-}
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  font-family: 'Raleway', sans-serif !important;
-  background-color: var(--background-color) !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

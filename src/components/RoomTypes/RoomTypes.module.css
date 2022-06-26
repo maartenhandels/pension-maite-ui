@@ -1,0 +1,20 @@
+.RoomTypes {
+    margin-top: 1rem;
+}
+
+.Text {
+    font-size: large;
+}
+
+.Images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Note {
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 80%;
+    font-size: large;
+}

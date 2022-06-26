@@ -1,0 +1,17 @@
+.PageHeader {
+    height: 400px;
+	background-image: url(../../../public/images/banner/donostia.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'AirbnbCereal', cursive;
+	color: white;
+	padding-top: 80px;
+}
+
+.PageHeader > h1 {
+    font-size: 5rem;
+}
