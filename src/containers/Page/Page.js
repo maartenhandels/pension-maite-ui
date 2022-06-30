@@ -5,11 +5,11 @@ import NavBar from "../../components/NavBar/NavBar";
 import PageTop from "../PageTop/PageTop";
 import Footer from "../../components/Footer/Footer";
 
-const Page = ({ children }) => {
+const Page = ({ children, hideBookBtn = false }) => {
   return (
     <>
       <ScrollUpArrow />
-      <NavBar />
+      <NavBar hideBookBtn={hideBookBtn} />
       <PageTop>
         {children}
         <Footer />

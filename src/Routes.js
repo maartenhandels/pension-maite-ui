@@ -9,6 +9,7 @@ import {
 import Main from "./pages/Main/Main";
 import Location from "./pages/Location/Location";
 import Rooms from "./pages/Rooms/Rooms";
+import Reservation1 from "./pages/Reservation1/Reservation1";
 
 export const siteMap = {
   HomePage: {
@@ -35,7 +36,21 @@ export const siteMap = {
     description: "Page with contact info",
     component: <Location />,
   },
+  Book: {
+    title: "Reservar",
+    path: "/book",
+    description: "Page to start a booking",
+    component: <Reservation1 />,
+  },
 };
+
+// Defines which elements have to be in the navbar
+export const navItems = [
+  siteMap.HomePage,
+  siteMap.RoomsPage,
+  siteMap.Location,
+  siteMap.Contact,
+];
 
 const Routes = () => {
   return (

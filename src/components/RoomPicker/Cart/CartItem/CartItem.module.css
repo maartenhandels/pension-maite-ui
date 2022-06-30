@@ -1,0 +1,17 @@
+.CartItem {
+    display: flex;
+    justify-content: space-between;
+    margin: .75rem 0;
+}
+
+.CartItem span {
+    text-align: left;
+}
+
+.Icon {
+    margin-right: 1rem;
+}
+
+.Icon:hover {
+    cursor: pointer;
+}

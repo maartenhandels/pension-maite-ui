@@ -11,7 +11,7 @@ const Main = () => {
   return (
     <Page>
       <CarouselBanner />
-      <DatePicker />
+      <DatePicker className={classes.DatePicker} />
       <About />
     </Page>
   );

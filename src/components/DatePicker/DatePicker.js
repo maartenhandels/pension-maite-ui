@@ -8,7 +8,7 @@ import Button from "../UI/Button/Button";
 
 import { formatDate } from "../../utilities/utilities";
 
-const DatePicker = () => {
+const DatePicker = ({ className }) => {
   const [entryDate, setEntryDate] = useState("");
   const [departureDate, setDepartureDate] = useState("");
   const [minDepartureDate, setMinDepartureDate] = useState("");
@@ -46,7 +46,7 @@ const DatePicker = () => {
   };
 
   return (
-    <FlexCenter className={classes.Container}>
+    <FlexCenter className={className}>
       <Card className={classes.Card}>
         <div className={classes.Form}>
           <div className={classes.FormField}>

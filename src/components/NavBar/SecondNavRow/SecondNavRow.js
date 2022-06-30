@@ -4,11 +4,10 @@ import classes from "./SecondNavRow.module.css";
 
 import NavItem from "./SecondNavRowItem/SecondNavRowItem";
 import Button from "../../UI/Button/Button";
-import { siteMap } from "../../../Routes";
+import { navItems } from "../../../Routes";
+import { Link } from "react-router-dom";
 
-const SecondNavRow = () => {
-  const navItems = ["Inicio", "Habitaciones", "Ubicación", "Contacto"];
-
+const SecondNavRow = ({ hideBookBtn = false }) => {
   return (
     <nav className={classes.NavBar}>
       <div className={classes.NavItemsWrapper}>
@@ -18,21 +17,21 @@ const SecondNavRow = () => {
           alt="logo"
         />
         <ul className={classes.NavItems}>
-          {Object.keys(siteMap).map((key) => (
-            <NavItem
-              key={key}
-              label={siteMap[key].title}
-              path={siteMap[key].path}
-            />
+          {navItems.map((item) => (
+            <NavItem key={item.title} label={item.title} path={item.path} />
           ))}
         </ul>
       </div>
 
-      <div className={classes.BookBtnWrapper}>
-        <Button className={classes.BookBtn}>
-          <span>RESERVAR</span>
-        </Button>
-      </div>
+      {!hideBookBtn && (
+        <Link to="/book">
+          <div className={classes.BookBtnWrapper}>
+            <Button className={classes.BookBtn}>
+              <span>RESERVAR</span>
+            </Button>
+          </div>
+        </Link>
+      )}
     </nav>
   );
 };

@@ -1,0 +1,26 @@
+.Cart {
+    width: 100%;
+    padding: 1rem;
+}
+
+.Header {
+    text-align: left;
+    margin: 0;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.Cart hr {
+    margin: 0;
+}
+
+.SubHeaders {
+    display: flex;
+    margin: .75rem 0;
+}
+
+.SubHeaders h5 {
+    width: 50%;
+    text-align: left;
+    margin: 0;;
+}

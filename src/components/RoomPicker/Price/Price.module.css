@@ -1,0 +1,14 @@
+.Price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+.Button {
+    width: 100%;
+    margin-top: .5rem;
+    color: white;
+    background-color: var(--green-color);
+}

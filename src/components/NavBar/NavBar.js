@@ -3,11 +3,11 @@ import React from "react";
 import FirsNavRow from "./FirstNavRow/FirsNavRow";
 import SecondNavRow from "./SecondNavRow/SecondNavRow";
 
-const NavBar = () => {
+const NavBar = ({ hideBookBtn = false }) => {
   return (
     <>
       <FirsNavRow />
-      <SecondNavRow />
+      <SecondNavRow hideBookBtn={hideBookBtn} />
     </>
   );
 };

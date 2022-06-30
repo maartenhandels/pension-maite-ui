@@ -1,0 +1,13 @@
+.RoomPicker {
+    width: 80%;
+    margin: auto;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.SideBar {
+    width: 30%;
+    margin: 1rem 0;
+    align-self: baseline;
+}

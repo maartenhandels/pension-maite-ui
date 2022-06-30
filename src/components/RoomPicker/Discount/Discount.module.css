@@ -1,0 +1,31 @@
+
+.Discount {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1rem;
+    align-self: baseline;
+}
+
+.Discount h5 {
+    text-align: left;
+    font-weight: bold;
+}
+
+.Input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Input input {
+    width: 55%;
+    /* margin-right: 1rem; */
+}
+
+.Button {
+    width: 40%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: white;
+    background-color: var(--primary-color);
+}
