@@ -29,3 +29,12 @@
     color: white;
     background-color: var(--primary-color);
 }
+
+.DiscountText {
+    margin-top: 1rem;
+    border: 1px solid var(--green-color);
+    border-radius: 8px;
+    padding: .5rem;
+    color: var(--green-color);
+    font-weight: bold;
+}

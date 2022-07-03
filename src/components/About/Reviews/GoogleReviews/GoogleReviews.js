@@ -57,8 +57,8 @@ const GoogleReview = ({ reviews }) => {
       : 0;
   }, []);
 
-  const cards = reviews.map((review) => (
-    <Card className={classes.Card}>
+  const cards = reviews.map((review, index) => (
+    <Card className={classes.Card} key={index}>
       <a href={review.url} className={classes.User} target="_blank">
         <b>{review.user}</b>
       </a>

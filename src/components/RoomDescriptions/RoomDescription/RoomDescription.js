@@ -1,9 +1,10 @@
 import React from "react";
 
+import classes from "./RoomDescription.module.css";
+
 import FlexCenter from "../../../containers/FlexCenter/FlexCenter";
 import Button from "../../UI/Button/Button";
-
-import classes from "./RoomDescription.module.css";
+import { Link } from "react-router-dom";
 
 const RoomDescription = ({ roomType, roomDescription, roomImagePath }) => {
   return (
@@ -15,7 +16,9 @@ const RoomDescription = ({ roomType, roomDescription, roomImagePath }) => {
       <div className={classes.Description}>
         <h3>Habitacion {roomType}</h3>
         <p>{roomDescription}</p>
-        <Button className={classes.Button}>Consultar Disponibilidad</Button>
+        <Link to="/book">
+          <Button className={classes.Button}>Consultar Disponibilidad</Button>
+        </Link>
       </div>
     </FlexCenter>
   );

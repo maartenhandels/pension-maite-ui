@@ -10,9 +10,10 @@ import Button from "../../../UI/Button/Button";
 
 const Room = ({
   roomType = "single",
-  roomPrice = 30,
+  totalPrice = 30,
   numberOfNights = 1,
   availableRooms = 4,
+  addItemHandler,
 }) => {
   const [quantity, setQuantity] = useState(1);
 
@@ -56,7 +57,7 @@ const Room = ({
           </p>
         </div>
         <div className={classes.Price}>
-          <h5>{roomPrice * quantity * numberOfNights}&nbsp;€</h5>
+          <h5>{totalPrice * quantity}&nbsp;€</h5>
           <p>
             Precio total {numberOfNights} <FontAwesomeIcon icon={faMoon} />
           </p>
@@ -87,7 +88,12 @@ const Room = ({
             +
           </span>
         </Card>
-        <Button className={classes.AddBtn}>
+        <Button
+          className={classes.AddBtn}
+          onClick={() =>
+            addItemHandler(roomType, quantity, totalPrice * quantity)
+          }
+        >
           Añadir&nbsp;
           <FontAwesomeIcon icon={faCartPlus} />
         </Button>

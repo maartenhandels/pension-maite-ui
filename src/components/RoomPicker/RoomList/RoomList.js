@@ -4,11 +4,19 @@ import classes from "./RoomList.module.css";
 
 import Room from "./Room/Room";
 
-const RoomList = () => {
+const RoomList = ({ availableRooms = [], addItemHandler }) => {
   return (
     <div className={classes.RoomList}>
-      <Room roomType="single" />
-      <Room roomType="double" />
+      {availableRooms.map((room, index) => (
+        <Room
+          key={index}
+          roomType={room.type}
+          roomPrice={room.totalPrice}
+          numberOfNights={room.numberOfNights}
+          availableRooms={room.availableRooms}
+          addItemHandler={addItemHandler}
+        />
+      ))}
     </div>
   );
 };

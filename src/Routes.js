@@ -56,8 +56,12 @@ const Routes = () => {
   return (
     <BrowserRouter>
       <ReactRoutes>
-        {Object.keys(siteMap).map((key) => (
-          <Route path={siteMap[key].path} element={siteMap[key].component} />
+        {Object.keys(siteMap).map((key, index) => (
+          <Route
+            key={index}
+            path={siteMap[key].path}
+            element={siteMap[key].component}
+          />
         ))}
         <Route path="*" element={<Navigate to="/" replace />} />
       </ReactRoutes>

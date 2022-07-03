@@ -8,11 +8,19 @@ import Button from "../UI/Button/Button";
 
 import { formatDate } from "../../utilities/utilities";
 
-const DatePicker = ({ className }) => {
-  const [entryDate, setEntryDate] = useState("");
-  const [departureDate, setDepartureDate] = useState("");
+const DatePicker = ({
+  checkinDate = "",
+  checkoutDate = "",
+  onSubmitHandler,
+  className,
+}) => {
+  const [entryDate, setEntryDate] = useState(checkinDate);
+  const [departureDate, setDepartureDate] = useState(checkoutDate);
   const [minDepartureDate, setMinDepartureDate] = useState("");
   const [btnDisabled, setBtnDisabled] = useState(true);
+
+  console.log(checkinDate);
+  console.log(checkoutDate);
 
   const entryDateChangeHandler = (event) => {
     setEntryDate(event.target.value);
@@ -71,6 +79,7 @@ const DatePicker = ({ className }) => {
               type="submit"
               className={`${classes.SearchBtn}`}
               disabled={btnDisabled}
+              onClick={() => onSubmitHandler(entryDate, departureDate)}
             >
               Ver Disponibilidad
             </Button>

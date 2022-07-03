@@ -1,5 +1,7 @@
 .RoomTypes {
+    margin: auto;
     margin-top: 1rem;
+    max-width: 90%;
 }
 
 .Text {

@@ -4,6 +4,7 @@ import classes from "./CarouselBanner.module.css";
 
 import { Carousel } from "react-bootstrap";
 import Button from "../UI/Button/Button";
+import { Link } from "react-router-dom";
 
 const CarouselBanner = () => {
   const items = [
@@ -20,6 +21,7 @@ const CarouselBanner = () => {
       header: "Pension Maite",
       text: "Visita nuestras habitaciones",
       buttonText: "Habitaciones",
+      buttonUrl: "/rooms",
     },
   ];
 
@@ -36,7 +38,9 @@ const CarouselBanner = () => {
             <h1 className={classes.Header}>{item.header}</h1>
             <h3 className={classes.Text}>{item.text}</h3>
             {item.buttonText && (
-              <Button className={classes.Button}>{item.buttonText}</Button>
+              <Link to={item.buttonUrl}>
+                <Button className={classes.Button}>{item.buttonText}</Button>
+              </Link>
             )}
           </Carousel.Caption>
         </Carousel.Item>

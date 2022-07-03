@@ -10,5 +10,26 @@
     width: 100%;
     margin-top: .5rem;
     color: white;
+    font-weight: bold;
     background-color: var(--green-color);
+}
+
+.PriceText {
+    display: flex;
+    margin: .5rem 0;
+}
+
+.OldPrice {
+    text-decoration: line-through;
+    font-weight: bold;
+}
+
+.NewPrice {
+    border: 1px solid var(--green-color);
+    background-color: var(--green-color);
+    color: white;
+    font-weight: bold;
+    margin-left: .5rem;
+    padding: .5rem;
+    border-radius: 8px;
 }
