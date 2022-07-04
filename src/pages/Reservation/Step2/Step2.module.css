@@ -1,0 +1,38 @@
+.Step2 {
+    width: 80%;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.ReturnButton {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .5rem;
+}
+
+.Content {
+    margin-top: 1rem;
+    display: flex;
+    flex-grow: 1;
+    gap: 1rem;
+}
+
+.PersonalDataForm {
+    width: 70%;
+    padding: 1.5rem;
+}
+
+.FormBtn {
+    margin-top: 1rem;
+    background-color: var(--primary-color);
+    width: 100%;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+}
+
+.SideBar {
+    background-color: green;
+    width: 30%;
+}

@@ -16,8 +16,8 @@ const Discount = ({ applyDiscountHandler }) => {
   const onClickHandler = () => {
     if (discountCode === "DISCOUNT") {
       setDiscountAmount(20);
-      applyDiscountHandler(20);
       setDiscountApplied(true);
+      applyDiscountHandler(20, discountCode);
     }
   };
 

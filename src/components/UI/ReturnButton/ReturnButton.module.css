@@ -1,0 +1,10 @@
+.ReturnButton {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: large;
+}
+
+.ReturnButton:hover {
+    cursor: pointer;
+}

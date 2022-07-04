@@ -9,10 +9,11 @@ import Discount from "./Discount/Discount";
 import Price from "./Price/Price";
 import CartItem from "./Cart/CartItem/CartItem";
 
-const RoomPicker = ({ availableRooms = [] }) => {
+const RoomPicker = ({ availableRooms = [], incrementStepHandler }) => {
   const [cartItems, setCartItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [discount, setDiscount] = useState(0);
+  const [discountCode, setDiscountCode] = useState();
 
   const addItemToCart = (roomType, quantity, price) => {
     const newCartItems = [];
@@ -32,8 +33,20 @@ const RoomPicker = ({ availableRooms = [] }) => {
     setCartItems(newCartItems);
   };
 
-  const applyDiscount = (discount) => {
+  const applyDiscount = (discount, discountCode) => {
     setDiscount(discount);
+    setDiscountCode(discountCode);
+  };
+
+  const incrementStep = () => {
+    let data = {
+      cartItems: cartItems,
+      totalPrice: totalPrice,
+      discount: discount,
+      discountCode: discountCode,
+    };
+
+    incrementStepHandler(data);
   };
 
   useEffect(() => {
@@ -58,6 +71,7 @@ const RoomPicker = ({ availableRooms = [] }) => {
           totalPrice={totalPrice}
           isCartEmpty={cartItems.length === 0}
           discount={discount}
+          incrementStepHandler={incrementStep}
         />
       </div>
     </div>

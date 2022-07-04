@@ -7,7 +7,12 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Button from "../../UI/Button/Button";
 import Card from "../../UI/Card/Card";
 
-const Price = ({ totalPrice = 0, discount = 0, isCartEmpty = true }) => {
+const Price = ({
+  totalPrice = 0,
+  discount = 0,
+  isCartEmpty = true,
+  incrementStepHandler,
+}) => {
   return (
     <Card className={classes.Price}>
       <span>IVA INCLUIDO</span>
@@ -27,7 +32,11 @@ const Price = ({ totalPrice = 0, discount = 0, isCartEmpty = true }) => {
           </span>
         )}
       </div>
-      <Button className={classes.Button} disabled={isCartEmpty}>
+      <Button
+        className={classes.Button}
+        disabled={isCartEmpty}
+        onClick={incrementStepHandler}
+      >
         Siguiente
       </Button>
     </Card>

@@ -23,7 +23,7 @@ const Cart = ({ cartItems = [], removeItemHandler }) => {
       )}
 
       {cartItems.map((cartItem, index) => (
-        <>
+        <div key={index}>
           <hr />
           <CartItem
             roomType={cartItem.roomType}
@@ -31,7 +31,7 @@ const Cart = ({ cartItems = [], removeItemHandler }) => {
             totalPrice={cartItem.price}
             removeItemHandler={removeItemHandler}
           />
-        </>
+        </div>
       ))}
     </Card>
   );

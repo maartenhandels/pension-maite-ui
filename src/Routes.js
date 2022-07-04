@@ -9,7 +9,7 @@ import {
 import Main from "./pages/Main/Main";
 import Location from "./pages/Location/Location";
 import Rooms from "./pages/Rooms/Rooms";
-import Reservation1 from "./pages/Reservation1/Reservation1";
+import Reservation from "./pages/Reservation/Reservation";
 
 export const siteMap = {
   HomePage: {
@@ -40,7 +40,7 @@ export const siteMap = {
     title: "Reservar",
     path: "/book",
     description: "Page to start a booking",
-    component: <Reservation1 />,
+    component: <Reservation />,
   },
 };
 
