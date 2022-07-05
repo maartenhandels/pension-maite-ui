@@ -1,0 +1,14 @@
+.CheckBox {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.CheckBox input {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.CheckBox span {
+    font-size: large;
+} 

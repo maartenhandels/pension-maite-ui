@@ -14,10 +14,7 @@ const Step2 = ({ reservationData, decrementStepHandler }) => {
         <ReturnButton onClickHandler={decrementStepHandler} />
       </div>
       <div className={classes.Content}>
-        <Card className={classes.PersonalDataForm}>
-          <PersonalDataForm />
-          <Button className={classes.FormBtn}>Confirmar</Button>
-        </Card>
+        <PersonalDataForm className={classes.PersonalDataForm} />
         <div className={classes.SideBar}>
           <h1>SideBar</h1>
         </div>

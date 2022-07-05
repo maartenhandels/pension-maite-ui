@@ -1,4 +1,4 @@
-.PersonalDataForm {
+.PersonalDataForm{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -7,64 +7,12 @@
     gap: 1rem;
 }
 
-.FormField {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: .5rem;
+
+.FormBtn {
+    margin-top: 1rem;
+    background-color: var(--primary-color);
     width: 100%;
-}
-
-.FormField input {
-    width: 100%;
-    padding: .5rem;
-    height: 3.5rem;
-}
-
-.InputWrapper {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* border: 1px solid black; */
-    height: 3.5rem;
-    gap: 1rem;
-}
-
-.InputWrapper input {
-    height: 100%;
-}
-
-.InputIconWrapper {
-    height: 100%;
-    border: 1px solid rgb(118, 118, 118);
-    padding: .5rem;
-    border-radius: 3px;
-    background-color: rgb(232, 230, 230);
-    display: flex;
-    align-items: center;
-}
-
-.InputIcon {
-    height: 80%;
-}
-
-.FormField textarea {
-    width: 100%;
-}
-
-.CheckBox {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.CheckBox input {
-    width: 1.5rem;
-    height: 1.5rem;
-}
-
-.CheckBox span {
+    color: white;
     font-size: large;
+    font-weight: bold;
 }
