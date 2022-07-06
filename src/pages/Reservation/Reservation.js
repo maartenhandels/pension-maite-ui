@@ -41,9 +41,12 @@ const Reservation = () => {
       {step === 2 && (
         <Step2
           reservationData={reservationData}
+          incrementStepHandler={incrementStep}
           decrementStepHandler={decrementStep}
         />
       )}
+
+      {step === 3 && <h1>Step 3</h1>}
     </Page>
   );
 };

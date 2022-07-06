@@ -12,3 +12,7 @@
 .CheckBox span {
     font-size: large;
 } 
+
+.Error {
+    outline: 2px solid red;
+}
