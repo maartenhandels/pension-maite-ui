@@ -5,7 +5,12 @@ import classes from "./Step1.module.css";
 import DatePicker from "../../../components/DatePicker/DatePicker";
 import RoomPicker from "../../../components/RoomPicker/RoomPicker";
 
-const Step1 = ({ checkinDate, checkoutDate, incrementStepHandler }) => {
+const Step1 = ({
+  checkinDate,
+  checkoutDate,
+  incrementStepHandler,
+  reservationData,
+}) => {
   const [availableRooms, setAvailableRooms] = useState([]);
 
   const checkDates = (checkinDate, checkoutDate) => {
@@ -31,6 +36,7 @@ const Step1 = ({ checkinDate, checkoutDate, incrementStepHandler }) => {
       <RoomPicker
         availableRooms={availableRooms}
         incrementStepHandler={incrementStepHandler}
+        reservationData={reservationData}
       />
     </div>
   );

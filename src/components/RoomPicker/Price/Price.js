@@ -2,7 +2,7 @@ import React from "react";
 
 import classes from "./Price.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 import Button from "../../UI/Button/Button";
 import Card from "../../UI/Card/Card";
@@ -12,6 +12,7 @@ const Price = ({
   discount = 0,
   isCartEmpty = true,
   incrementStepHandler,
+  decrementStepHandler,
 }) => {
   return (
     <Card className={classes.Price}>
@@ -32,13 +33,25 @@ const Price = ({
           </span>
         )}
       </div>
-      <Button
-        className={classes.Button}
-        disabled={isCartEmpty}
-        onClick={incrementStepHandler}
-      >
-        Siguiente
-      </Button>
+      {incrementStepHandler && (
+        <Button
+          className={classes.Button}
+          disabled={isCartEmpty}
+          onClick={incrementStepHandler}
+        >
+          Siguiente
+        </Button>
+      )}
+
+      {decrementStepHandler && (
+        <Button
+          className={`${classes.Button} ${classes.Alert}`}
+          onClick={decrementStepHandler}
+        >
+          <FontAwesomeIcon icon={faArrowLeft} />
+          Hacer Cambios
+        </Button>
+      )}
     </Card>
   );
 };

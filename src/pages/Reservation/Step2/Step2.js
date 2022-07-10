@@ -4,6 +4,8 @@ import classes from "./Step2.module.css";
 
 import ReturnButton from "../../../components/UI/ReturnButton/ReturnButton";
 import PersonalDataForm from "../../../components/PersonalDataForm/PersonalDataForm";
+import Cart from "../../../components/RoomPicker/Cart/Cart";
+import Price from "../../../components/RoomPicker/Price/Price";
 
 const Step2 = ({
   reservationData,
@@ -29,7 +31,12 @@ const Step2 = ({
           onFormSubmit={submitForm}
         />
         <div className={classes.SideBar}>
-          <h1>SideBar</h1>
+          <Cart cartItems={reservationData?.cartItems} />
+          <Price
+            totalPrice={reservationData?.totalPrice}
+            discount={reservationData?.discount}
+            decrementStepHandler={decrementStepHandler}
+          />
         </div>
       </div>
     </div>

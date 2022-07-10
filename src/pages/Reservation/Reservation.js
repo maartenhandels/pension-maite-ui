@@ -8,6 +8,7 @@ import PageHeader from "../../components/PageHeader/PageHeader";
 import ReservationProgressBar from "../../components/ReservationProgressBar/ReservationProgressBar";
 import Step1 from "./Step1/Step1";
 import Step2 from "./Step2/Step2";
+import Step3 from "./Step3/Step3";
 
 const Reservation = () => {
   const { state } = useLocation();
@@ -30,11 +31,13 @@ const Reservation = () => {
       <PageHeader>Reservas</PageHeader>
 
       <ReservationProgressBar currentStep={step} />
+
       {step === 1 && (
         <Step1
           checkinDate={state ? state.checkinDate : ""}
           checkoutDate={state ? state.checkoutDate : ""}
           incrementStepHandler={incrementStep}
+          reservationData={reservationData}
         />
       )}
 
@@ -46,7 +49,7 @@ const Reservation = () => {
         />
       )}
 
-      {step === 3 && <h1>Step 3</h1>}
+      {step === 3 && <Step3 />}
     </Page>
   );
 };

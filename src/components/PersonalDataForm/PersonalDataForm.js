@@ -125,7 +125,7 @@ const PersonalDataForm = ({ className, onFormSubmit }) => {
           onChangeHandler={setIsAdult}
           error={touched && !isAdult}
         />
-        <Button className={classes.FormBtn}>Confirmar</Button>
+        <Button className={classes.FormBtn}>Finalizar Reserva</Button>
       </form>
     </Card>
   );

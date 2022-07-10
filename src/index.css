@@ -2,6 +2,10 @@
   --primary-color: #4586FF;
   --background-color: #F7F7F7;
   --green-color: #3aac5d;
+  --alert-background-color: #edb95e9d;
+  --alert-font-color: #7d5104;
+  --alert-background-hover-color: #d6a249ef;
+  --alert-font-hover-color: #46300b;
 }
 
 body {

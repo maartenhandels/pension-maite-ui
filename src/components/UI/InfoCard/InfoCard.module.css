@@ -1,0 +1,9 @@
+.Info {
+    display: inline-block;
+    padding: 1rem;
+    background-color: #8cadeb98;
+    color: #003caa;
+    font-weight: bold;
+    font-size: large;
+    white-space:nowrap;
+}

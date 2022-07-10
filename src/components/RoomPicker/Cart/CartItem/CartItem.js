@@ -6,16 +6,22 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const CartItem = ({ roomType, quantity, totalPrice, removeItemHandler }) => {
   return (
-    <div className={classes.CartItem}>
+    <div
+      className={`${classes.CartItem} ${
+        removeItemHandler ? "" : classes.Step2
+      }`}
+    >
       <span>
         x{quantity}&nbsp;{roomType}
       </span>
       <span>{totalPrice}&nbsp;€</span>
-      <FontAwesomeIcon
-        icon={faTrash}
-        className={classes.Icon}
-        onClick={() => removeItemHandler(roomType)}
-      />
+      {removeItemHandler && (
+        <FontAwesomeIcon
+          icon={faTrash}
+          className={classes.Icon}
+          onClick={() => removeItemHandler(roomType)}
+        />
+      )}
     </div>
   );
 };

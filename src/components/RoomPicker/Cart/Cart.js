@@ -33,6 +33,10 @@ const Cart = ({ cartItems = [], removeItemHandler }) => {
           />
         </div>
       ))}
+
+      {cartItems.length == 0 && (
+        <div className={classes.Alert}>Añade habitaciones al carro</div>
+      )}
     </Card>
   );
 };

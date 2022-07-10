@@ -9,8 +9,14 @@ import Discount from "./Discount/Discount";
 import Price from "./Price/Price";
 import CartItem from "./Cart/CartItem/CartItem";
 
-const RoomPicker = ({ availableRooms = [], incrementStepHandler }) => {
-  const [cartItems, setCartItems] = useState([]);
+const RoomPicker = ({
+  availableRooms = [],
+  incrementStepHandler,
+  reservationData,
+}) => {
+  const [cartItems, setCartItems] = useState(
+    reservationData?.cartItems ? reservationData.cartItems : []
+  );
   const [totalPrice, setTotalPrice] = useState(0);
   const [discount, setDiscount] = useState(0);
   const [discountCode, setDiscountCode] = useState();
