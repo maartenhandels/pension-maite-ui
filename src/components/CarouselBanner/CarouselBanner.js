@@ -1,26 +1,29 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 import classes from "./CarouselBanner.module.css";
 
 import { Carousel } from "react-bootstrap";
 import Button from "../UI/Button/Button";
-import { Link } from "react-router-dom";
 
 const CarouselBanner = () => {
+  const { t } = useTranslation(null, { keyPrefix: "homePage.carousel" });
+
   const items = [
     {
       imagePath: "images/banner/donostia.jpg",
       imageAlt: "Image of Donostia",
-      header: "Pension Maite",
-      text: "Donostia / San Sebastian",
+      header: t("header_1"),
+      text: t("text_1"),
       buttonText: null,
     },
     {
       imagePath: "images/banner/room.jpg",
       imageAlt: "Image of a Room",
-      header: "Pension Maite",
-      text: "Visita nuestras habitaciones",
-      buttonText: "Habitaciones",
+      header: t("header_2"),
+      text: t("text_2"),
+      buttonText: t("btnText"),
       buttonUrl: "/rooms",
     },
   ];

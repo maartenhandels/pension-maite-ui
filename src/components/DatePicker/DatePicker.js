@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 import classes from "./DatePicker.module.css";
 
@@ -6,23 +7,21 @@ import Card from "../UI/Card/Card";
 import FlexCenter from "../../containers/FlexCenter/FlexCenter";
 import Button from "../UI/Button/Button";
 
-import { formatDate } from "../../utilities/utilities";
+import { formatDate } from "../../utilities/dateUtilities";
+import FormInput from "../UI/FormElements/FormInput/FormInput";
+import DateInput from "../UI/FormElements/DateInput/DateInput";
 
-const DatePicker = ({
-  checkinDate = "",
-  checkoutDate = "",
-  onSubmitHandler,
-  className,
-}) => {
+const DatePicker = ({ checkinDate = "", checkoutDate = "", onSubmitHandler, className }) => {
+  
   const [entryDate, setEntryDate] = useState(checkinDate);
   const [departureDate, setDepartureDate] = useState(checkoutDate);
   const [minDepartureDate, setMinDepartureDate] = useState("");
   const [btnDisabled, setBtnDisabled] = useState(true);
 
-  console.log(checkinDate);
-  console.log(checkoutDate);
+  const { t } = useTranslation(null, { keyPrefix: "datePicker" });
 
   const entryDateChangeHandler = (event) => {
+    console.log(event);
     setEntryDate(event.target.value);
 
     // Remove selected departureDate if selected entryDate is after that departureDate
@@ -42,8 +41,6 @@ const DatePicker = ({
   const departureDateChangeHandler = (event) => {
     setDepartureDate(event.target.value);
 
-    console.log("Changed");
-
     // Remove selected entryDate if selected departureDate is before that entryDate
     if (event.target.value < entryDate) {
       setEntryDate("");
@@ -53,38 +50,35 @@ const DatePicker = ({
     setBtnDisabled(!entryDate || !event.target.value);
   };
 
+  useEffect(() => {
+    setBtnDisabled(!entryDate || !departureDate);
+  }, [])
+
   return (
-    <FlexCenter className={className}>
+    <FlexCenter className={`${classes.DatePicker} ${className}`}>
       <Card className={classes.Card}>
-        <div className={classes.Form}>
-          <div className={classes.FormField}>
-            <label>FECHA ENTRADA</label>
-            <input
-              type="date"
-              onChange={entryDateChangeHandler}
-              value={entryDate}
-            />
-          </div>
-          <div className={classes.FormField}>
-            <label>FECHA SALIDA</label>
-            <input
-              type="date"
-              value={departureDate}
-              onChange={departureDateChangeHandler}
-              min={minDepartureDate}
-            />
-          </div>
-          <div className={`form-group col-md-4 `}>
-            <Button
-              type="submit"
-              className={`${classes.SearchBtn}`}
-              disabled={btnDisabled}
-              onClick={() => onSubmitHandler(entryDate, departureDate)}
-            >
-              Ver Disponibilidad
-            </Button>
-          </div>
-        </div>
+        <DateInput
+          label={t("entryDateLabel").toUpperCase()}
+          value={entryDate}
+          onChangeHandler={entryDateChangeHandler}
+          className={classes.DateInput}
+        />
+        <DateInput
+          name="departureDate"
+          label={t("departureDateLabel").toUpperCase()}
+          value={departureDate}
+          onChangeHandler={departureDateChangeHandler}
+          minDate={minDepartureDate}
+          className={classes.DateInput}
+        />
+        <Button
+          type="submit"
+          className={`${classes.SearchBtn}`}
+          disabled={btnDisabled}
+          onClick={() => onSubmitHandler(entryDate, departureDate)}
+        >
+          {t("btnText")}
+        </Button>
       </Card>
     </FlexCenter>
   );

@@ -26,7 +26,7 @@ const Step1 = ({
   }, []);
 
   return (
-    <div className={classes.Step1}>
+    <>
       <DatePicker
         className={classes.DatePicker}
         checkinDate={checkinDate}
@@ -38,7 +38,7 @@ const Step1 = ({
         incrementStepHandler={incrementStepHandler}
         reservationData={reservationData}
       />
-    </div>
+    </>
   );
 };
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-import classes from "./Main.module.css";
+import classes from "./HomePage.module.css";
 
 import Page from "../../containers/Page/Page";
 import CarouselBanner from "../../components/CarouselBanner/CarouselBanner";
@@ -8,7 +8,7 @@ import DatePicker from "../../components/DatePicker/DatePicker";
 import About from "../../components/About/About";
 import { useNavigate } from "react-router-dom";
 
-const Main = () => {
+const HomePage = () => {
   const navigate = useNavigate();
 
   const checkAvailability = (checkinDate, checkoutDate) => {
@@ -31,4 +31,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default HomePage;

@@ -1,37 +1,34 @@
-.Card {
+.DatePicker {
     width: 80%;
-    padding: 1.25rem;
+    margin: auto;
 }
 
-.Form {
+.Card {
+    width: 100%;
+    padding: 2rem;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    gap: 2rem;
 }
 
-.FormField {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 15rem;
+.DateInput {
+    flex: 2 1 0;
 }
 
-.FormField > * {
-    padding: 0.5rem;
-}
-
-.FormField > label {
-    text-align: left;
-    font-weight: bold;
-    color: var(--primary-color);
+.DateInput > input {
+    width: 100%;
 }
 
 .SearchBtn {
+    min-width: 25%;
+    min-height: 100%;
     border-radius: 20px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: large;
 	color: var(--primary-color);
 	border-color: var(--primary-color);
     font-weight: bold;
-    width: 15rem;
 }
 
 .SearchBtn:hover {

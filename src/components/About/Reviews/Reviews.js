@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import classes from "./Reviews.module.css";
 
@@ -8,6 +9,8 @@ import GoogleScore from "./GoogleScore/GoogleScore";
 import GoogleReviews from "./GoogleReviews/GoogleReviews";
 
 const Reviews = () => {
+  const { t } = useTranslation(null, { keyPrefix: "homePage.about.reviews" });
+
   const reviews = [
     {
       user: "Alfredo García",
@@ -46,7 +49,7 @@ const Reviews = () => {
 
   return (
     <>
-      <Header>Lo que opinan nuestros clientes</Header>
+      <Header>{t("section_header")}</Header>
       <FlexCenter>
         <GoogleScore />
         <GoogleReviews reviews={reviews} />

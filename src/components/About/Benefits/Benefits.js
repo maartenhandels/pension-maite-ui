@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import classes from "./Benefits.module.css";
 import {
@@ -13,32 +14,34 @@ import BenefitsItem from "./BenefitsItem/BenefitsItem";
 import Header from "../../UI/SectionHeader/SectionHeader";
 
 const Benefits = () => {
+  const { t } = useTranslation(null, { keyPrefix: "homePage.about.benefits" });
+
   const benefits = [
     {
       icon: faWifi,
-      header: "Wifi gratuito",
-      text: "La Pensión Maite ofrece Wifi gratuito para los clientes en toda la instalación.",
+      header: t("header_1"),
+      text: t("text_1"),
     },
     {
       icon: faClock,
-      header: "Horario flexible",
-      text: "A pesar de que los horarios de entrada y salida estén definidos, siempre se pueden ajustar a sus necesidades previo aviso al establecimiento.",
+      header: t("header_2"),
+      text: t("text_2"),
     },
     {
       icon: faCalendarAlt,
-      header: "Reserva directa",
-      text: "Es posible realizar la reserva directamente desde la página web o contactando con la Pensión Maite.",
+      header: t("header_3"),
+      text: t("text_3"),
     },
     {
       icon: faMapMarkerAlt,
-      header: "Buena ubicación",
-      text: "Tiene una ubicación excepcional, bien comunicada con toda la ciudad y en un barrio que dispone de todos los servicios necesarios.",
+      header: t("header_4"),
+      text: t("text_4"),
     },
   ];
   return (
     <div>
-      <Header>¿Qué me ofrece?</Header>
-      <FlexCenter>
+      <Header>{t("section_header")}</Header>
+      <FlexCenter className={classes.Benefits}>
         {benefits.map((benefit) => (
           <BenefitsItem
             key={benefit.header}

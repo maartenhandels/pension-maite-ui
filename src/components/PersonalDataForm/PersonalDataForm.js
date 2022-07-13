@@ -9,7 +9,7 @@ import FormInput from "../UI/FormElements/FormInput/FormInput";
 import TextArea from "../UI/FormElements/TextArea/TexArea";
 import CheckBox from "../UI/FormElements/CheckBox/CheckBox";
 import Button from "../UI/Button/Button";
-import { validateEmail } from "../../utilities/utilities";
+import { validateEmail } from "../../utilities/stringUtitilities";
 
 const PersonalDataForm = ({ className, onFormSubmit }) => {
   const [firstName, setFirstName] = useState("");

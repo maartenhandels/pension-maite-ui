@@ -1,38 +1,38 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import classes from "./RoomTypes.module.css";
+import * as Constants from "../../constants/constants";
 
-import ImageCircle from "../UI/ImageCircle/ImageCircle";
 import RoomType from "./RoomType/RoomType";
 import Card from "../UI/Card/Card";
 import FlexCenter from "../../containers/FlexCenter/FlexCenter";
 
 const RoomTypes = () => {
+  const { t } = useTranslation(null, { keyPrefix: "roomsPage.roomTypes" });
+
   const roomTypes = [
     {
-      imagePath: "images/rooms/round/single.png",
-      imageText: "Individual",
+      imagePath: Constants.SingleRoomImagePath,
+      imageText: t("single"),
     },
     {
-      imagePath: "images/rooms/round/two-beds.png",
-      imageText: "Dos Camas",
+      imagePath: Constants.TwoBedsRoomImagePath,
+      imageText: t("twoBeds"),
     },
     {
-      imagePath: "images/rooms/round/double.png",
-      imageText: "Matrimonio",
+      imagePath: Constants.DoubleRoomImagePath,
+      imageText: t("double"),
     },
     {
-      imagePath: "images/rooms/round/triple.png",
-      imageText: "Triple",
+      imagePath: Constants.TripleRoomImagePath,
+      imageText: t("triple"),
     },
   ];
 
   return (
     <div className={classes.RoomTypes}>
-      <p className={classes.Text}>
-        La Pension Maite ofrece <b>16 habitaciones</b> adaptadas a las nuevas
-        normativas arquitectónicas
-      </p>
+      <p className={classes.Text} dangerouslySetInnerHTML={{ __html: t("topText") }} />
       <div className={classes.Images}>
         {roomTypes.map((roomType) => (
           <RoomType
@@ -45,10 +45,8 @@ const RoomTypes = () => {
       </div>
       <FlexCenter>
         <Card className={`alert alert-primary ${classes.Note}`}>
-          Posibilidad de habitación familiar formada por dos habitaciones, una
-          doble y una triple, separadas del resto de la pensión por una
-          puerta.&nbsp;
-          <a href="#">Contácte con nosotros.</a>
+          {t("bottomText")}&nbsp;
+          <a href="#">{t("urlText")}</a>
         </Card>
       </FlexCenter>
     </div>

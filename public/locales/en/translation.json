@@ -1,0 +1,70 @@
+{
+    "navBar": {
+        "firstRow": {
+            "myReservation": "My Reservation",
+            "languagePicker": "Language" 
+        },
+        "secondRow": {
+            "homePage": "Home",
+            "rooms": "Rooms",
+            "location": "Location",
+            "contact": "Contact",
+            "reservationBtn": "Book"
+        }
+    },
+    "datePicker": {
+        "entryDateLabel": "Entry Date",
+        "departureDateLabel": "Departure Date",
+        "btnText": "Check availability"
+    },
+    "homePage": {
+        "carousel": {
+            "header_1": "Pension Maite",
+            "text_1": "Donostia / San Sebastian",
+            "header_2": "Pension Maite",
+            "text_2": "Visit our Rooms",
+            "btnText": "Rooms"
+        },
+        "about": {
+            "description": {
+                "paragraph_1": "Pensión Maite** is located in the <strong>Amara neighbourhood of Donostia-San Sebastián </strong> next to the Anoeta-Illumbe sporting complex, very close to the hospital area and a short walk from the Euskotren station  (San Sebastián - France), and bus station.",
+                "paragraph_2": "It is located on the <strong>Avenue of Madrid</strong>, next to the city entrance/exit and a few minutes walk from La Concha beach",
+                "paragraph_3": "It is located in a commercial area that has all the necessary services (shops, bars, restaurants, long term parking areas, etc).",
+                "paragraph_4": "Well communicated with the rest of the city thanks to the continuous city buses that stop at the door of the guesthouse."
+            },
+            "benefits": {
+                "section_header": "What does it have to offer?",
+                "header_1": "Free Wifi",
+                "text_1": "Pension Maite offers free Wifi for guests throughout the facility.",
+                "header_2": "Flexible timetable",
+                "text_2": "Although check-in and check-out times are defined, they can always be adjusted to your needs after prior notice to the establishment.",
+                "header_3": "Direct booking",
+                "text_3": "It is possible to make a reservation directly from the website or by contacting Pensión Maite.",
+                "header_4": "Great location",
+                "text_4": "It has an exceptional location, well communicated with the whole city and in a neighbourhood with all the necessary services."
+            },
+            "reviews": {
+                "section_header": "What our customers say about us"
+            }
+        }
+    },
+    "roomsPage": {
+        "roomTypes": {
+            "topText": "The pension Maite offers <strong>16 rooms</strong> adapted to the latest architecture standards",
+            "single": "Single",
+            "twoBeds": "Two Beds",
+            "double": "Double",
+            "triple": "Triple",
+            "bottomText": "Possibility of a family room consisting of two rooms, one double and one triple, separated from the rest of the guesthouse by a door.",
+            "urlText": "Contact us"
+        }
+    },
+    "reservationPage": {
+        "pageHeader": "Reservations",
+        "progressBar": {
+            "step1": "1. Selection",
+            "step2": "2. Data",
+            "step3": "3. Confirmation"
+        }
+    }
+}

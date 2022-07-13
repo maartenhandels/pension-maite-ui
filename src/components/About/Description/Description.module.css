@@ -1,9 +1,14 @@
+.Description {
+    align-items: flex-start;
+}
+
 .Description > * {
     margin: 0 2rem;
 }
 
 .DescriptionImage {
-    height: 500px;
+    max-height: 500px;
+    max-width: 40%;
 }
 
 .DescriptionText > h4 {
@@ -25,4 +30,5 @@
 .DescriptionText > p {
     text-align: justify; 
     line-height: 175%;
+    font-size: large;
 }

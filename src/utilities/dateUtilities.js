@@ -9,8 +9,3 @@ export const formatDate = (date) => {
     padTo2Digits(date.getDate()),
   ].join("-");
 };
-
-export const validateEmail = (email) => {
-  console.info("Checking if " + email + " is a valid email");
-  return /\S+@\S+\.\S+/.test(email);
-};
