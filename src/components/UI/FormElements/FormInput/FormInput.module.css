@@ -7,10 +7,18 @@
     width: 100%;
 }
 
-.FormField input {
+.Input {
     width: 100%;
     padding: .5rem;
     height: 3.5rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+}
+
+.FormField label {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: large;
 }
 
 .InputWrapper {
@@ -20,14 +28,6 @@
     justify-content: center;
     height: 3.5rem;
     gap: 1rem;
-}
-
-.InputWrapper input {
-    height: 100%;
-}
-
-.InputWrapper input {
-    height: 100%;
 }
 
 .InputIconWrapper {
@@ -60,6 +60,6 @@
 }
 
 .Error {
-    border-color: red;
+    border: 2px solid red;
 }
 

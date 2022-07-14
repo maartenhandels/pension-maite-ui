@@ -3,7 +3,7 @@ import React from "react";
 import classes from "./Location.module.css";
 
 import Page from "../../containers/Page/Page";
-import PageHeader from "../../components/PageHeader/PageHeader";
+import PageHeader from "../../components/UI/PageHeader/PageHeader";
 import { LocationContent } from "../../components/Location/Location";
 import Content from "../../containers/Content/Content";
 

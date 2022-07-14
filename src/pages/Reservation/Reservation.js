@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import Page from "../../containers/Page/Page";
-import PageHeader from "../../components/PageHeader/PageHeader";
+import PageHeader from "../../components/UI/PageHeader/PageHeader";
 import ReservationProgressBar from "../../components/ReservationProgressBar/ReservationProgressBar";
 import Step1 from "./Step1/Step1";
 import Step2 from "./Step2/Step2";

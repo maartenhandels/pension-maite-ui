@@ -65,6 +65,29 @@
             "step1": "1. Selection",
             "step2": "2. Data",
             "step3": "3. Confirmation"
+        },
+        "step2": {
+            "returnBtn": "Return",
+            "form": {
+                "firstNameLabel": "First Name:",
+                "lastNameLabel": "Last Name:",
+                "emailLabel": "Email:",
+                "phoneLabel": "Phone:",
+                "commentLabel": "Comment:",
+                "adultLabel": "I confirm I am over 18 years old.",
+                "btnLabel": "Make Reservation"
+            }
+        },
+        "cart": {
+            "header": "My Reservation",
+            "roomHeader": "Room",
+            "priceHeader": "Price"
+        },
+        "discount": {
+            "header": "Discount Code",
+            "btnText": "Validate",
+            "discountAppliedMessage": "discount applied!",
+            "invalidCodeMessage": "Invalid Discount Code"
         }
     }
 }

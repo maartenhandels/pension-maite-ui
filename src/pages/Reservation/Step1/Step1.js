@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import classes from "./Step1.module.css";
 
 import DatePicker from "../../../components/DatePicker/DatePicker";
-import RoomPicker from "../../../components/RoomPicker/RoomPicker";
+import RoomPicker from "../../../components/ReservationItems/RoomPicker/RoomPicker";
 
 const Step1 = ({
   checkinDate,

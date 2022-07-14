@@ -27,7 +27,7 @@ const FormInput = ({
         name={name}
         value={value}
         onChange={(e) => onChangeHandler(e.target.value)}
-        className={isNotValid ? classes.Error : ""}
+        className={`${classes.Input} ${isNotValid ? classes.Error : ""}`}
       />
     </div>
   ) : (
@@ -36,7 +36,7 @@ const FormInput = ({
       name={name}
       value={value}
       onChange={(e) => onChangeHandler(e.target.value)}
-      className={isNotValid ? classes.Error : ""}
+      className={`${classes.Input} ${isNotValid ? classes.Error : ""}`}
     />
   );
 

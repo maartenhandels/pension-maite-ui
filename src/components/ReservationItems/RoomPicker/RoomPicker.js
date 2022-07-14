@@ -2,12 +2,10 @@ import React, { useEffect, useState } from "react";
 
 import classes from "./RoomPicker.module.css";
 
-import RoomList from "./RoomList/RoomList";
-import Cart from "./Cart/Cart";
-import FlexCenter from "../../containers/FlexCenter/FlexCenter";
-import Discount from "./Discount/Discount";
-import Price from "./Price/Price";
-import CartItem from "./Cart/CartItem/CartItem";
+import RoomList from "../RoomList/RoomList";
+import Cart from "../Cart/Cart";
+import Discount from "../Discount/Discount";
+import Price from "../Price/Price";
 
 const RoomPicker = ({
   availableRooms = [],

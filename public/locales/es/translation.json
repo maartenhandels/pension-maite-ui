@@ -71,6 +71,29 @@
             "step1": "1. Selección",
             "step2": "2. Datos",
             "step3": "3. Confirmación"
+        },
+        "step2": {
+            "returnBtn": "Volver",
+            "form": {
+                "firstNameLabel": "Primer Nombre:",
+                "lastNameLabel": "Apellidos:",
+                "emailLabel": "Email:",
+                "phoneLabel": "Teléfono:",
+                "commentLabel": "Comentarios:",
+                "adultLabel": "Confirmo que tengo +18 años",
+                "btnLabel": "Finalizar Reserva"
+            }
+        },
+        "cart": {
+            "header": "Mi Reserva",
+            "roomHeader": "Habitación",
+            "priceHeader": "Precio"
+        },
+        "discount": {
+            "header": "Código Promocional",
+            "btnText": "Validar",
+            "discountAppliedMessage": "de descuento aplicado!",
+            "invalidCodeMessage": "Código incorrecto"
         }
     }
 }

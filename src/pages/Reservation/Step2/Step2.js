@@ -3,9 +3,9 @@ import React from "react";
 import classes from "./Step2.module.css";
 
 import ReturnButton from "../../../components/UI/ReturnButton/ReturnButton";
-import PersonalDataForm from "../../../components/PersonalDataForm/PersonalDataForm";
-import Cart from "../../../components/RoomPicker/Cart/Cart";
-import Price from "../../../components/RoomPicker/Price/Price";
+import PersonalDataForm from "../../../components/ReservationItems/PersonalDataForm/PersonalDataForm";
+import Cart from "../../../components/ReservationItems/Cart/Cart";
+import Price from "../../../components/ReservationItems/Price/Price";
 
 const Step2 = ({
   reservationData,

@@ -1,17 +1,22 @@
 import React, { useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 import classes from "./PersonalDataForm.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
-import Card from "../UI/Card/Card";
-import FormInput from "../UI/FormElements/FormInput/FormInput";
-import TextArea from "../UI/FormElements/TextArea/TexArea";
-import CheckBox from "../UI/FormElements/CheckBox/CheckBox";
-import Button from "../UI/Button/Button";
-import { validateEmail } from "../../utilities/stringUtitilities";
+import Card from "../../UI/Card/Card";
+import FormInput from "../../UI/FormElements/FormInput/FormInput";
+import TextArea from "../../UI/FormElements/TextArea/TexArea";
+import CheckBox from "../../UI/FormElements/CheckBox/CheckBox";
+import Button from "../../UI/Button/Button";
+import { validateEmail } from "../../../utilities/stringUtitilities";
 
 const PersonalDataForm = ({ className, onFormSubmit }) => {
+  const { t } = useTranslation(null, {
+    keyPrefix: "reservationPage.step2.form",
+  });
+
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -29,7 +34,7 @@ const PersonalDataForm = ({ className, onFormSubmit }) => {
   const submitFormHandler = (e) => {
     e.preventDefault();
     setTouched(true);
-    console.log("Submited!");
+
     if (validateForm()) {
       const formData = {
         firstName: firstName,
@@ -74,7 +79,7 @@ const PersonalDataForm = ({ className, onFormSubmit }) => {
           refProp={firstNameRef}
           name="firstName"
           type="text"
-          label="Primer Nombre:"
+          label={t("firstNameLabel")}
           value={firstName}
           onChangeHandler={setFirstName}
           required={true}
@@ -84,7 +89,7 @@ const PersonalDataForm = ({ className, onFormSubmit }) => {
           refProp={lastNameRef}
           name="lastName"
           type="text"
-          label="Apellidos:"
+          label={t("lastNameLabel")}
           value={lastName}
           onChangeHandler={setLastName}
           required={true}
@@ -94,7 +99,7 @@ const PersonalDataForm = ({ className, onFormSubmit }) => {
           refProp={emailRef}
           name="email"
           type="email"
-          label="Email:"
+          label={t("emailLabel")}
           value={email}
           onChangeHandler={setEmail}
           required={true}
@@ -104,7 +109,7 @@ const PersonalDataForm = ({ className, onFormSubmit }) => {
         <FormInput
           refProp={phoneRef}
           name="phone"
-          label="Teléfono:"
+          label={t("phoneLabel")}
           value={phone}
           onChangeHandler={setPhone}
           required={true}
@@ -113,19 +118,19 @@ const PersonalDataForm = ({ className, onFormSubmit }) => {
         />
         <TextArea
           name="comment"
-          label="Leave a Comment:"
+          label={t("commentLabel")}
           value={comment}
           onChangeHandler={setComment}
         />
         <CheckBox
           refProp={isAdultRef}
           name="adult"
-          label="Confirmo que tengo +18 años"
+          label={t("adultLabel")}
           value={isAdult}
           onChangeHandler={setIsAdult}
           error={touched && !isAdult}
         />
-        <Button className={classes.FormBtn}>Finalizar Reserva</Button>
+        <Button className={classes.FormBtn}>{t("btnLabel")}</Button>
       </form>
     </Card>
   );
