@@ -64,7 +64,7 @@ const LanguagePicker = () => {
         propRef={TogglerBtnrRef}
       >
         <FontAwesomeIcon className={classes.icon} icon={faGlobe} />
-        {t("languagePicker")}
+        <span>{t("languagePicker")}</span>
       </Button>
       <ul className={classes.LanguageOptions}>
         {isOpen &&

@@ -39,6 +39,7 @@ const MyReservationForm = ({ setReservationDataHandler }) => {
           label="Email de Reserva"
           value={email}
           onChangeHandler={setEmail}
+          className={classes.Input}
         />
         <FormInput
           name="code"
@@ -46,6 +47,7 @@ const MyReservationForm = ({ setReservationDataHandler }) => {
           label="Código de Reserva"
           value={reservationCode}
           onChangeHandler={setReservationCode}
+          className={classes.Input}
         />
         <Button className={classes.Button}>Buscar</Button>
       </form>

@@ -12,6 +12,9 @@
             "reservationBtn": "Book"
         }
     },
+    "footer": {
+        "faq": "FAQ"
+    },
     "datePicker": {
         "entryDateLabel": "Entry Date",
         "departureDateLabel": "Departure Date",
@@ -57,6 +60,22 @@
             "triple": "Triple",
             "bottomText": "Possibility of a family room consisting of two rooms, one double and one triple, separated from the rest of the guesthouse by a door.",
             "urlText": "Contact us"
+        }
+    },
+    "contactPage": {
+        "pageHeader": "Contacto",
+        "contactData": {
+            "header": "Contacto"
+        },
+        "location": {
+            "header": "Address",
+            "line1": "Avda. de Madrid 19, 1º y entresuelo B.",
+            "line2": "20011 Donostia, San Sebastián"
+        },
+        "businessHours": {
+            "header": "Reception Hours",
+            "line1": "9:30 - 14:00",
+            "line2": "16:30 - 21:30"
         }
     },
     "reservationPage": {

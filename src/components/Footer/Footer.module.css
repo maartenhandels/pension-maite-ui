@@ -1,6 +1,6 @@
 .Footer {
     margin-top: 60px;
-	background-color: #222222;
+	background-color: var(--black-color);
 	color: #A8ACB3;
     /* display: flex; */
 }

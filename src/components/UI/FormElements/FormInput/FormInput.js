@@ -16,6 +16,7 @@ const FormInput = ({
   maxLength = Number.MAX_SAFE_INTEGER,
   isNotValid = false,
   refProp,
+  className,
 }) => {
   const inputElement = icon ? (
     <div className={classes.InputWrapper}>
@@ -41,7 +42,7 @@ const FormInput = ({
   );
 
   return (
-    <div className={classes.FormField} ref={refProp}>
+    <div className={`${classes.FormField} ${className}`} ref={refProp}>
       {label && <label htmlFor={name}>{label}</label>}
       {inputElement}
     </div>

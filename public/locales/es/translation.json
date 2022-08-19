@@ -12,6 +12,9 @@
             "reservationBtn": "Reservar"
         }
     },
+    "footer": {
+        "faq": "Preguntas Frecuentes"
+    },
     "datePicker": {
         "entryDateLabel": "fecha entrada",
         "departureDateLabel": "fecha salida",
@@ -63,6 +66,23 @@
         "pageHeader": "Contacto",
         "contactData": {
             "header": "Contacto"
+        },
+        "location": {
+            "header": "Ubicación",
+            "line1": "Avda. de Madrid 19, 1º y entresuelo B.",
+            "line2": "20011 Donostia - San Sebastián"
+        },
+        "businessHours": {
+            "header": "Horario de Atención",
+            "line1": "9:30 - 14:00",
+            "line2": "16:30 - 21:30"
+        },
+        "form": {
+            "nameLabel": "Nombre y Apellidos",
+            "subjectLabel": "Asunto",
+            "emailLabel": "Email",
+            "phoneLabel": "Teléfono",
+            "commentLabel": "Comentario"
         }
     },
     "reservationPage": {

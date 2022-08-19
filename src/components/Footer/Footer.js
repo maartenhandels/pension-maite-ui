@@ -1,10 +1,13 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import classes from "./Footer.module.css";
 import { faPhoneAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Footer = () => {
+  const { t } = useTranslation(null, { keyPrefix: "footer" });
+
   return (
     <div className={classes.Footer}>
       <div className={classes.TopSection}>
@@ -21,7 +24,7 @@ const Footer = () => {
         </a>
         <span className={classes.TextSeparator}>|</span>
         <a href="#" className={classes.Link}>
-          Preguntas Frecuentes
+          {t("faq")}
         </a>
       </div>
 

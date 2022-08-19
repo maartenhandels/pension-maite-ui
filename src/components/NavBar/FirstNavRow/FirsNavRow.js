@@ -17,10 +17,10 @@ const FirsNavRow = () => {
       <Link to="/my-reservation">
         <Button className={classes.ReservationBtn}>
           <FontAwesomeIcon
-            className={classes.reservationIcon}
+            className={classes.ReservationIcon}
             icon={faSuitcaseRolling}
           />
-          {t("myReservation")}
+          <span>{t("myReservation")}</span>
         </Button>
       </Link>
       <LanguagePicker />

@@ -4,11 +4,11 @@ import classes from "./SecondNavRowItem.module.css";
 
 import { NavLink } from "react-router-dom";
 
-const SecondNavRowItem = ({ label, path }) => {
+const SecondNavRowItem = ({ label, path, className }) => {
   return (
     <NavLink
       className={({ isActive }) =>
-        `${classes.option} ${isActive ? classes.active : ""}`
+        `${classes.option} ${isActive ? classes.active : ""} ${className}`
       }
       to={path}
     >

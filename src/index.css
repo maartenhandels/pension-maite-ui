@@ -8,6 +8,20 @@
   --alert-font-color: #7d5104;
   --alert-background-hover-color: #d6a249ef;
   --alert-font-hover-color: #46300b;
+  --black-color: #222222;
+
+  /*
+    Resolution brekpoints used in media queries
+
+    small-max-resolution: 480px;
+    medium-min-resolution: 481px;
+    medium-max-resolution: 768px;
+    big-min-resolution: 769px;
+    big-max-resolution: 1024px;
+    large-min-resolution: 1025px;
+    large-max-resolution: 1200px;
+    extra-large-min-resolution: 1201px
+  */
 }
 
 body {

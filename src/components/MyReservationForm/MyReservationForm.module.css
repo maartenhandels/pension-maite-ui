@@ -24,3 +24,17 @@
 .Button:hover {
     color: var(--info-font-color);
 }
+
+@media only screen and (max-width: 768px) {
+	.MyReservation {
+        width: 90%;
+    }
+
+    .Button {
+        width: 100%;
+    }
+
+    .Input {
+        align-items: center;
+    }
+}

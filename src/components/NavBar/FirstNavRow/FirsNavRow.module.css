@@ -4,7 +4,7 @@
     margin: 1rem 3rem;
 }
 
-.reservationIcon {
+.ReservationIcon {
     margin-right: 0.5rem;
 }
 
@@ -14,4 +14,25 @@
 
 .ReservationBtn:hover {
     color: var(--primary-color);
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .container {
+        margin: 0 auto;
+        padding-top: .5rem;
+        width: 100%;
+    }
+/*     
+    .ReservationBtn {
+        padding: 0;
+        height: 100%;
+    }
+
+    .ReservationIcon {
+        height: 100%;
+    }
+    .ReservationBtn span {
+        display: none;
+    } */
 }
