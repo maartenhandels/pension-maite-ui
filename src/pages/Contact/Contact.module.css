@@ -1,6 +1,42 @@
 .Content {
-    width: 80%;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+    gap: 1rem;
+}
+
+.SideBar {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
+    max-width: 30%;
+}
+
+.Form {
+    display: flex;
+    flex: 1;
+    max-width: 70%;
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .SideBar {
+        max-width: 35%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .Content {
+        flex-direction: column;
+    }
+
+    .SideBar {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .Form {
+        max-width: 100%;
+    }
 }

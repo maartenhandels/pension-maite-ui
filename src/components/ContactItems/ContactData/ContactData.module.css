@@ -1,0 +1,20 @@
+.ContactData {
+    padding: 1rem 2rem;
+    text-align: left;
+}
+
+.DataField {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .ContactData {
+        text-align: center;
+    }
+
+    .DataField {
+        justify-content: center;
+    }
+}

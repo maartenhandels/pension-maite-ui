@@ -1,0 +1,10 @@
+.Location {
+    padding: 1rem 2rem;
+    text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+    .Location {
+        text-align: center;
+    }
+}
