@@ -12,7 +12,7 @@ const Rooms = () => {
   return (
     <Page>
       <PageHeader>Habitaciones</PageHeader>
-      <Content>
+      <Content className={classes.Content}>
         <RoomTypes />
         <RoomDescriptions />
       </Content>

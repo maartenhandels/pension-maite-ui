@@ -3,3 +3,10 @@
 	top: -4rem;
     z-index: 2;
 }
+
+@media only screen and (max-width: 768px) {
+    .DatePicker {
+        position: unset;
+        margin-top: 1rem !important;
+    }
+}

@@ -32,3 +32,17 @@
     line-height: 175%;
     font-size: large;
 }
+
+@media only screen and (max-width: 1025px) {
+	.Description {
+		flex-wrap: wrap;
+	}
+
+    .Description > * {
+        margin: 0;
+    }
+
+    .DescriptionImage {
+        max-width: 100%;
+    }
+}

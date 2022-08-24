@@ -35,3 +35,20 @@
     background-color: var(--primary-color);
     color: white;
 }
+
+@media only screen and (max-width: 768px) {
+    .DatePicker {
+        width: 95%;
+    }
+
+    .Card {
+        flex-direction: column;
+        padding: 1rem 1rem;
+    }
+
+    .SearchBtn {
+        min-width: 0;
+        min-height: 0;
+        font-size: medium;
+    }
+}

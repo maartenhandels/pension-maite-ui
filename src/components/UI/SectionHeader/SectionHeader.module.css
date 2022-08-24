@@ -12,3 +12,14 @@
     background: var(--background-color);
     padding: 0 1.5rem;
 }
+
+@media only screen and (max-width: 768px) {
+    .SectionHeader {
+        border: none;
+        line-height: normal;
+    }
+
+    .SectionHeader > span {
+        padding: 0;
+    }
+}

@@ -5,14 +5,15 @@ import classes from "./About.module.css";
 import Description from "./Description/Description";
 import Benefits from "./Benefits/Benefits";
 import Reviews from "./Reviews/Reviews";
+import Content from "../../containers/Content/Content";
 
 const About = () => {
   return (
-    <div className={classes.About}>
+    <Content>
       <Description />
       <Benefits />
       <Reviews />
-    </div>
+    </Content>
   );
 };
 
