@@ -19,7 +19,7 @@ const ReservationProgressBar = ({ currentStep = 1 }) => {
             icon={faBed}
             className={`${classes.Icon} ${classes.Active}`}
           />
-          <span>{t("step1").toUpperCase()}</span>
+          <span className={classes.StepText}>{t("step1").toUpperCase()}</span>
         </div>
 
         {/* Horizontal Line */}
@@ -33,7 +33,7 @@ const ReservationProgressBar = ({ currentStep = 1 }) => {
             icon={faUser}
             className={`${classes.Icon} ${currentStep > 1 ? classes.Active : ""}`}
           />
-          <span>{t("step2").toUpperCase()}</span>
+          <span className={classes.StepText}>{t("step2").toUpperCase()}</span>
         </div>
 
         {/* Horizontal Line */}
@@ -47,7 +47,7 @@ const ReservationProgressBar = ({ currentStep = 1 }) => {
             icon={faCheck}
             className={`${classes.Icon} ${currentStep > 2 ? classes.Active : ""}`}
           />
-          <span>{t("step3").toUpperCase()}</span>
+          <span className={classes.StepText}>{t("step3").toUpperCase()}</span>
         </div>
       </div>
     </div>

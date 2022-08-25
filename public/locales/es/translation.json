@@ -9,7 +9,8 @@
             "rooms": "Habitaciones",
             "location": "Ubicación",
             "contact": "Contacto",
-            "reservationBtn": "Reservar"
+            "reservationBtn": "Reservar",
+            "myReservation": "Reserva"
         }
     },
     "footer": {

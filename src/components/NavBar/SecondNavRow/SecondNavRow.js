@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 import classes from "./SecondNavRow.module.css";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 
 import NavItem from "./SecondNavRowItem/SecondNavRowItem";
 import Button from "../../UI/Button/Button";
@@ -45,25 +45,37 @@ const SecondNavRow = ({ hideBookBtn = false }) => {
         </Button>
       </div>
 
-      <div className={classes.NavItemsWrapper}>
+      <div className={`${classes.NavItemsWrapper} ${toggleMenu ? classes.Open : classes.Close}`}>
         <img
           src="images/logos/logo-pension-maite.png"
           className={classes.Logo}
           alt="logo"
         />
-        {(toggleMenu || screenWidth > 768) && (
-          <ul className={classes.NavItems}>
-            {navItems.map((item, index) => (
-              <NavItem
-                key={index}
-                label={t(item.labelKey)}
-                path={item.path}
-                className={classes.NavItem}
-              />
-            ))}
-          </ul>
-        )}
+
+        <FontAwesomeIcon icon={faX} className={`${classes.CloseBtn} ${toggleMenu ? classes.CloseBtn_Open : classes.CloseBtn_Close}`} onClick={toggleNav} />
+        
+        <ul className={classes.NavItems}>
+          {navItems.map((item, index) => (
+            <NavItem
+              key={index}
+              label={t(item.labelKey)}
+              path={item.path}
+              className={classes.NavItem}
+            />
+          ))}
+
+          {screenWidth < 769 && (
+            <NavItem
+              key="my-reservation"
+              label={t("myReservation")}
+              path="/my-reservation"
+              className={classes.NavItem}
+            />
+          )}
+
+        </ul>
       </div>
+
 
       {!hideBookBtn && (
         <div className={classes.BookBtnWrapper}>

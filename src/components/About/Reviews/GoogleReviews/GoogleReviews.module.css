@@ -9,15 +9,16 @@
     font-weight: bold;
 }
 
-.GoogleReview {
+.GoogleReviews {
     display: flex;
     position: relative;
     overflow: scroll;
     scroll-behavior: smooth;
+    gap: 2rem;
+    padding: 1rem;
 }
 
 .Card {
-    margin: 2rem;
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -42,4 +43,10 @@
 
 .Comment {
     text-align: justify;
+}
+
+@media only screen and (max-width: 1025px) {
+	.MoveBtn { display: none; }
+
+    .Card { min-width: 20rem; }
 }

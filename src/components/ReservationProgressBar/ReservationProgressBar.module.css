@@ -46,3 +46,37 @@
     color: #3aac5d;
     opacity: 1;
 }
+
+@media only screen and (max-width: 768px) {
+	.ProgressbarStep {
+        border-radius: 100%;
+        border: 4px solid #ddd;
+    }
+
+    .Active {
+        border-color: #3aac5d;
+        color: #3aac5d;
+        opacity: 1;
+    }
+    
+    .ProgressbarIcons {
+        gap: 1.2rem;
+    }
+    
+    .Icon {
+        border: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 0;
+        margin: 1rem;
+        padding: 0;
+    }
+
+    .StepText {
+        display: none;
+    }
+
+    .HrLine {
+        display: none;
+    }
+}

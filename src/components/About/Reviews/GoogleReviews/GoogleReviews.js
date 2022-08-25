@@ -88,7 +88,7 @@ const GoogleReview = ({ reviews }) => {
       >
         &lt;
       </Button>
-      <div className={classes.GoogleReview} ref={carousel}>
+      <div className={classes.GoogleReviews} ref={carousel}>
         {cards}
       </div>
       <Button

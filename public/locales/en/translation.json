@@ -9,7 +9,8 @@
             "rooms": "Rooms",
             "location": "Location",
             "contact": "Contact",
-            "reservationBtn": "Book"
+            "reservationBtn": "Book",
+            "myReservation": "Reservation"
         }
     },
     "footer": {

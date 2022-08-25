@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
@@ -9,6 +9,19 @@ import Button from "../UI/Button/Button";
 
 const CarouselBanner = () => {
   const { t } = useTranslation(null, { keyPrefix: "homePage.carousel" });
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const changeWidth = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", changeWidth);
+
+    return () => {
+      window.removeEventListener("resize", changeWidth);
+    };
+  }, []);
 
   const items = [
     {
@@ -29,7 +42,7 @@ const CarouselBanner = () => {
   ];
 
   return (
-    <Carousel controls={true} indicators={false} fade={true} interval={6000}>
+    <Carousel controls={screenWidth > 768} indicators={false} fade={true} interval={6000}>
       {items.map((item) => (
         <Carousel.Item key={item.text}>
           <img
@@ -39,12 +52,16 @@ const CarouselBanner = () => {
           />
           <Carousel.Caption className={classes.Content}>
             <h1 className={classes.Header}>{item.header}</h1>
-            <h3 className={classes.Text}>{item.text}</h3>
-            {item.buttonText && (
-              <Link to={item.buttonUrl}>
-                <Button className={classes.Button}>{item.buttonText}</Button>
-              </Link>
-            )}
+            {screenWidth > 768 && (
+              <h3 className={classes.Text}>{item.text}</h3>) && (
+                item.buttonText && (
+                  <Link to={item.buttonUrl}>
+                    <Button className={classes.Button}>{item.buttonText}</Button>
+                  </Link>
+                )
+              )
+            }
+            
           </Carousel.Caption>
         </Carousel.Item>
       ))}

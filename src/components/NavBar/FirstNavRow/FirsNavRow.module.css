@@ -22,17 +22,7 @@
         margin: 0 auto;
         padding-top: .5rem;
         width: 100%;
-    }
-/*     
-    .ReservationBtn {
-        padding: 0;
-        height: 100%;
-    }
-
-    .ReservationIcon {
-        height: 100%;
-    }
-    .ReservationBtn span {
+        justify-content: center;
         display: none;
-    } */
+    }
 }

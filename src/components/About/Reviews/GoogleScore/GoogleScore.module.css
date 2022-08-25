@@ -19,3 +19,7 @@
 .Text span {
     width: 50px;
 }
+
+@media only screen and (max-width: 1025px) {
+	.GoogleScore { display: none; }
+}
