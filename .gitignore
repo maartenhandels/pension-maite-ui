@@ -15,6 +15,7 @@
 .DS_Store
 .AppleDouble
 .LSOverride
+.bash_profile
 
 # Icon must end with two \r
 Icon
