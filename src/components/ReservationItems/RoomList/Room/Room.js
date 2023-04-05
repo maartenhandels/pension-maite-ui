@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import classes from "./Room.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,8 +8,11 @@ import FlexCenter from "../../../../containers/FlexCenter/FlexCenter";
 import Card from "../../../UI/Card/Card";
 import Button from "../../../UI/Button/Button";
 
+import { useTranslation } from "react-i18next";
+
 const Room = ({
-  roomType = "single",
+  roomType = "SINGLE",
+  roomTypeImageFilename = "single.jpg",
   totalPrice = 30,
   numberOfNights = 1,
   availableRooms = 4,
@@ -17,14 +20,11 @@ const Room = ({
 }) => {
   const [quantity, setQuantity] = useState(1);
 
+  const { t } = useTranslation(null, { keyPrefix: "roomsPage.roomTypes" });
+
   const quantityMinValue = 1;
 
-  const imagePaths = {
-    single: "images/rooms/single.jpg",
-    double: "images/rooms/double.jpg",
-    twoBeds: "images/rooms/two-beds.jpg",
-    triple: "images/rooms/triple.jpg",
-  };
+  console.log("imageFilename: " + roomTypeImageFilename);
 
   const incrementHandler = () => {
     if (quantity == availableRooms) {
@@ -44,20 +44,15 @@ const Room = ({
     <Card className={classes.Room}>
       <FlexCenter className={classes.FirstRow}>
         <img
-          src={imagePaths[roomType]}
+          src={`images/rooms/${roomTypeImageFilename}`}
           className={`img-fluid ${classes.Image}`}
         />
         <div className={classes.Info}>
-          <h4>Habitación Individual</h4>
-          <p>
-            Habitación sencilla pero muy acogedora, perfecta para trabajadores y
-            viajeros que lo que buscan es un lugar agradable donde dormir, tener
-            una buena conexión wifi y tener baño privado. Además, dispone de
-            escritorio y frigorífico.
-          </p>
+          <h4>{t(`${roomType.toLowerCase()}_title`)}</h4>
+          <p>{t(`${roomType.toLowerCase()}_description`)}</p>
         </div>
         <div className={classes.Price}>
-          <h5>{totalPrice * quantity}&nbsp;€</h5>
+          <h5>{totalPrice}&nbsp;€</h5>
           <p>
             Precio total {numberOfNights} <FontAwesomeIcon icon={faMoon} />
           </p>

@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 import classes from "./RoomTypes.module.css";
-import * as Constants from "../../constants/constants";
+import * as Config from "../../config/config";
 
 import RoomType from "./RoomType/RoomType";
 import Card from "../UI/Card/Card";
@@ -13,26 +13,29 @@ const RoomTypes = () => {
 
   const roomTypes = [
     {
-      imagePath: Constants.SingleRoomImagePath,
+      imagePath: Config.SingleRoomImagePath,
       imageText: t("single"),
     },
     {
-      imagePath: Constants.TwoBedsRoomImagePath,
+      imagePath: Config.TwoBedsRoomImagePath,
       imageText: t("twoBeds"),
     },
     {
-      imagePath: Constants.DoubleRoomImagePath,
+      imagePath: Config.DoubleRoomImagePath,
       imageText: t("double"),
     },
     {
-      imagePath: Constants.TripleRoomImagePath,
+      imagePath: Config.TripleRoomImagePath,
       imageText: t("triple"),
     },
   ];
 
   return (
     <div className={classes.RoomTypes}>
-      <p className={classes.Text} dangerouslySetInnerHTML={{ __html: t("topText") }} />
+      <p
+        className={classes.Text}
+        dangerouslySetInnerHTML={{ __html: t("topText") }}
+      />
       <div className={classes.Images}>
         {roomTypes.map((roomType) => (
           <RoomType

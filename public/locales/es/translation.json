@@ -55,9 +55,11 @@
     "roomsPage": {
         "roomTypes": {
             "topText": "La Pension Maite ofrece <strong>16 habitaciones</strong> adaptadas a las nuevas normativas arquitectónicas",
-            "single": "Individual",
-            "twoBeds": "Dos Camas",
-            "double": "Matrimonio",
+            "single_title": "Single Room",
+            "single_description": "Habitación sencilla pero muy acogedora, perfecta para trabajadores y viajeros que lo que buscan es un lugar agradable donde dormir, tener una buena conexión wifi y tener baño privado. Además, dispone de escritorio y frigorífico.",
+            "twin_title": "Twin Room",
+            "double_title": "Habitacion Doble",
+            "double_description": "Habitación sencilla pero muy acogedora, perfecta para trabajadores y viajeros que lo que buscan es un lugar agradable donde dormir, tener una buena conexión wifi y tener baño privado. Además, dispone de escritorio y frigorífico.",
             "triple": "Triple",
             "bottomText": "Posibilidad de habitación familiar formada por dos habitaciones, una doble y una triple, separadas del resto de la pensión por una puerta.",
             "urlText": "Contácte con nosotros."

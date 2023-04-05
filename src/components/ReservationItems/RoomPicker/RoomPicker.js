@@ -12,6 +12,7 @@ const RoomPicker = ({
   incrementStepHandler,
   reservationData,
 }) => {
+  console.log(availableRooms);
   const [cartItems, setCartItems] = useState(
     reservationData?.cartItems ? reservationData.cartItems : []
   );
