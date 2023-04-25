@@ -25,6 +25,7 @@ const Room = ({
   const quantityMinValue = 1;
 
   console.log("imageFilename: " + roomTypeImageFilename);
+  console.log("totalPrice: " + totalPrice);
 
   const incrementHandler = () => {
     if (quantity == availableRooms) {

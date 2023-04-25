@@ -8,11 +8,14 @@ import FlexCenter from "../../containers/FlexCenter/FlexCenter";
 import Button from "../UI/Button/Button";
 
 import { formatDate } from "../../utilities/dateUtilities";
-import FormInput from "../UI/FormElements/FormInput/FormInput";
 import DateInput from "../UI/FormElements/DateInput/DateInput";
 
-const DatePicker = ({ checkinDate = "", checkoutDate = "", onSubmitHandler, className }) => {
-  
+const DatePicker = ({
+  checkinDate = "",
+  checkoutDate = "",
+  onSubmitHandler,
+  className,
+}) => {
   const [entryDate, setEntryDate] = useState(checkinDate);
   const [departureDate, setDepartureDate] = useState(checkoutDate);
   const [minDepartureDate, setMinDepartureDate] = useState("");
@@ -20,8 +23,11 @@ const DatePicker = ({ checkinDate = "", checkoutDate = "", onSubmitHandler, clas
 
   const { t } = useTranslation(null, { keyPrefix: "datePicker" });
 
+  useEffect(() => {
+    setBtnDisabled(!entryDate || !departureDate);
+  }, []);
+
   const entryDateChangeHandler = (event) => {
-    console.log(event);
     setEntryDate(event.target.value);
 
     // Remove selected departureDate if selected entryDate is after that departureDate
@@ -49,10 +55,6 @@ const DatePicker = ({ checkinDate = "", checkoutDate = "", onSubmitHandler, clas
     // Set button enabled if there is a value for both dates
     setBtnDisabled(!entryDate || !event.target.value);
   };
-
-  useEffect(() => {
-    setBtnDisabled(!entryDate || !departureDate);
-  }, [])
 
   return (
     <FlexCenter className={`${classes.DatePicker} ${className}`}>

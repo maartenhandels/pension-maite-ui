@@ -9,8 +9,10 @@ import Price from "../Price/Price";
 
 const RoomPicker = ({
   availableRooms = [],
+  numberOfNights,
   incrementStepHandler,
   reservationData,
+  setReservationDataHandler,
 }) => {
   console.log(availableRooms);
   const [cartItems, setCartItems] = useState(
@@ -61,12 +63,15 @@ const RoomPicker = ({
     });
 
     setTotalPrice(newTotalPrice);
+
+    setReservationDataHandler({ ...reservationData, cartItems: cartItems });
   }, [cartItems]);
 
   return (
     <div className={classes.RoomPicker}>
       <RoomList
         availableRooms={availableRooms}
+        numberOfNights={numberOfNights}
         addItemHandler={addItemToCart}
       />
       <div className={classes.SideBar}>
