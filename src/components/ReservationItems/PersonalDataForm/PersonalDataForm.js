@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import classes from "./PersonalDataForm.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 import Card from "../../UI/Card/Card";
@@ -61,7 +60,7 @@ const PersonalDataForm = ({ className, onFormSubmit }) => {
       emailRef.current.scrollIntoView();
       return false;
     }
-    if (!phone || !phone.length === 9) {
+    if (!phone || phone.length != 9) {
       phoneRef.current.scrollIntoView();
       return false;
     }
