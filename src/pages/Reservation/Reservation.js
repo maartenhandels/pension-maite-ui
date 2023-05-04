@@ -34,11 +34,14 @@ const Reservation = () => {
 
   useEffect(() => {
     console.log("AvailableRoomTypes length:", availableRoomTypes.length);
-    console.log("Reservation Data: " + JSON.stringify(reservationData));
+    console.log("Reservation Data in RC: " + JSON.stringify(reservationData));
   }, [availableRoomTypes, reservationData]);
 
   const incrementStep = (data) => {
-    setReservationData({ ...reservationData, data });
+    if (data) {
+      setReservationData({ ...reservationData, ...data });
+    }
+
     setStep(step + 1);
     console.log(data);
   };
@@ -105,7 +108,6 @@ const Reservation = () => {
             reservationData={reservationData}
             incrementStepHandler={incrementStep}
             getAvailableRoomTypesHandler={getAvailableRoomTypes}
-            setReservationDataHandler={setReservationData}
           />
         )}
 
@@ -117,7 +119,9 @@ const Reservation = () => {
           />
         )}
 
-        {step === 3 && <Step3 />}
+        {step === 3 && (
+          <Step3 confirmationData={reservationData.confirmation} />
+        )}
       </Content>
     </Page>
   );

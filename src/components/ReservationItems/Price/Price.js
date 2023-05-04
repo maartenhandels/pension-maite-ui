@@ -11,7 +11,7 @@ const Price = ({
   totalPrice = 0,
   discount = 0,
   isCartEmpty = true,
-  incrementStepHandler,
+  priceConfirmationHandler,
   decrementStepHandler,
 }) => {
   return (
@@ -33,11 +33,11 @@ const Price = ({
           </span>
         )}
       </div>
-      {incrementStepHandler && (
+      {priceConfirmationHandler && (
         <Button
           className={classes.Button}
           disabled={isCartEmpty}
-          onClick={incrementStepHandler}
+          onClick={priceConfirmationHandler}
         >
           Siguiente
         </Button>

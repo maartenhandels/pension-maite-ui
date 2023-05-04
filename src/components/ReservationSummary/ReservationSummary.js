@@ -7,32 +7,38 @@ import InfoCard from "../UI/InfoCard/InfoCard";
 
 import { capitalizeFirstLetter } from "../../utilities/stringUtitilities";
 
-const ReservationSummary = ({ reservationData, newReservation = false, className }) => {
-
+const ReservationSummary = ({
+  confirmationData,
+  newReservation = false,
+  className,
+}) => {
+  console.log("ConfirmationData: " + confirmationData);
   return (
     <Card className={`${classes.ReservationSummary} ${className}`}>
       {newReservation && <h2>Su Reserva ha sido confirmada!</h2>}
       <h3>
-        Código de Reserva: <b>{reservationData?.reservationCode}</b>
+        Código de Reserva: <b>{confirmationData?.reservationId}</b>
       </h3>
       <hr />
       <h3>Detalles:</h3>
       <div className={classes.Dates}>
-        <InfoCard>Fecha entrada: {reservationData?.checkinDate}</InfoCard>
-        <InfoCard>Fecha salida: {reservationData?.checkoutDate}</InfoCard>
+        <InfoCard>Fecha entrada: {confirmationData?.checkinDate}</InfoCard>
+        <InfoCard>Fecha salida: {confirmationData?.checkoutDate}</InfoCard>
       </div>
       <div className={classes.Rooms}>
-        {reservationData?.rooms.map((room, index) => {
-          console.log(room);
+        {confirmationData?.reservedRoomTypes.map((roomType, index) => {
+          console.log(roomType);
           return (
             <Card className={classes.Room} key={index}>
               <img
-                src="images/rooms/single.jpg"
+                src={`images/rooms/${roomType.imageFilename}`}
                 className={`img-fluid ${classes.RoomImage}`}
               />
               <div className={classes.Tags}>
-                <InfoCard>{capitalizeFirstLetter(room.type)}</InfoCard>
-                <InfoCard>Cantidad: {room.quantity}</InfoCard>
+                <InfoCard>
+                  {capitalizeFirstLetter(roomType.roomTypeName)}
+                </InfoCard>
+                <InfoCard>Cantidad: {roomType.numberOfRooms}</InfoCard>
               </div>
             </Card>
           );
@@ -40,7 +46,7 @@ const ReservationSummary = ({ reservationData, newReservation = false, className
       </div>
       <div className={classes.Price}>
         <h3>Precio Total:</h3>
-        <InfoCard>{reservationData?.totalPrice}€</InfoCard>
+        <InfoCard>{confirmationData?.totalPrice}€</InfoCard>
         <span>(El pago se realizará en la pensión)</span>
       </div>
     </Card>

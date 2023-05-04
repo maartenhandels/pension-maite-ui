@@ -7,6 +7,8 @@ import PersonalDataForm from "../../../components/ReservationItems/PersonalDataF
 import Cart from "../../../components/ReservationItems/Cart/Cart";
 import Price from "../../../components/ReservationItems/Price/Price";
 
+import { API_BASE_URL } from "../../../config/config";
+
 const Step2 = ({
   reservationData,
   incrementStepHandler,
@@ -14,8 +16,49 @@ const Step2 = ({
 }) => {
   const submitForm = (formData) => {
     if (formData) {
-      reservationData["personalData"] = formData;
-      incrementStepHandler(reservationData);
+      reservationData.personalData = formData;
+      const roomTypes = {};
+      reservationData.cartItems?.forEach((item) => {
+        roomTypes[item.roomType] = item.quantity;
+      });
+      const data = {
+        checkinDate: reservationData.checkinDate,
+        checkoutDate: reservationData.checkoutDate,
+        contactData: {
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+        },
+        roomTypes: roomTypes,
+      };
+
+      console.log("Data: " + data);
+
+      const options = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      };
+
+      console.log(options);
+
+      fetch(API_BASE_URL + "/reservation/create", options)
+        .then((response) => response.json())
+        .then((data) => {
+          if (data?.status === "OK") {
+            reservationData.confirmation = data.data;
+            incrementStepHandler(reservationData);
+          } else {
+            console.error("API call failed");
+          }
+        })
+        .catch((error) => {
+          console.log("API call failed: " + error);
+          console.error(error);
+        });
     } else {
       window.alert("Form is incomplete");
     }

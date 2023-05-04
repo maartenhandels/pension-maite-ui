@@ -12,7 +12,6 @@ const RoomPicker = ({
   numberOfNights,
   incrementStepHandler,
   reservationData,
-  setReservationDataHandler,
 }) => {
   console.log(availableRooms);
   const [cartItems, setCartItems] = useState(
@@ -45,15 +44,13 @@ const RoomPicker = ({
     setDiscountCode(discountCode);
   };
 
-  const incrementStep = () => {
-    let data = {
+  const confirmPrice = () => {
+    incrementStepHandler({
       cartItems: cartItems,
       totalPrice: totalPrice,
       discount: discount,
       discountCode: discountCode,
-    };
-
-    incrementStepHandler(data);
+    });
   };
 
   useEffect(() => {
@@ -63,8 +60,6 @@ const RoomPicker = ({
     });
 
     setTotalPrice(newTotalPrice);
-
-    setReservationDataHandler({ ...reservationData, cartItems: cartItems });
   }, [cartItems]);
 
   return (
@@ -81,7 +76,7 @@ const RoomPicker = ({
           totalPrice={totalPrice}
           isCartEmpty={cartItems.length === 0}
           discount={discount}
-          incrementStepHandler={incrementStep}
+          priceConfirmationHandler={confirmPrice}
         />
       </div>
     </div>

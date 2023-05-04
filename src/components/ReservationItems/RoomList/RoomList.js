@@ -8,6 +8,7 @@ import { type } from "@testing-library/user-event/dist/type";
 const RoomList = ({ availableRooms = [], addItemHandler, numberOfNights }) => {
   console.log("The list inside RoomList is: " + availableRooms);
 
+  // TODO: Add some ui element in case there are no available rooms for those dates
   return (
     <div className={classes.RoomList}>
       {availableRooms.map((roomType, index) => (
