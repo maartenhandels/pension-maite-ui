@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 
 import classes from "./MyReservation.module.css";
 
@@ -19,7 +19,7 @@ const MyReservation = () => {
           <MyReservationForm setReservationDataHandler={setReservationData} />
         )}
         {reservationData && (
-          <ReservationSummary reservationData={reservationData} />
+          <ReservationSummary confirmationData={reservationData} />
         )}
       </Content>
     </Page>

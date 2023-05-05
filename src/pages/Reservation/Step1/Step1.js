@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import classes from "./Step1.module.css";
 
@@ -13,7 +13,6 @@ const Step1 = ({
   getAvailableRoomTypesHandler,
   setReservationDataHandler,
 }) => {
-  console.log("Inside Step 1: " + reservationData.checkinDate);
   return (
     <>
       <DatePicker

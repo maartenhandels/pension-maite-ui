@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import classes from "./FormInput.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { validateEmail } from "../../../../utilities/dateUtilities";
+import { isValidEmail } from "../../../../utilities/dateUtilities";
 
 const FormInput = ({
   name,

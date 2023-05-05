@@ -6,28 +6,47 @@ import Card from "../UI/Card/Card";
 import FormInput from "../UI/FormElements/FormInput/FormInput";
 import Button from "../UI/Button/Button";
 
+import { isValidEmail } from "../../utilities/stringUtitilities";
+import { RESERVATION_CODE_LENGTH } from "../../config/config";
+import { API_BASE_URL } from "../../config/config";
+
 const MyReservationForm = ({ setReservationDataHandler }) => {
   const [email, setEmail] = useState("");
   const [reservationCode, setReservationCode] = useState("");
 
-  const onSubmitHandler = (e) => {
+  const onSubmitHandler = async (e) => {
     e.preventDefault();
 
-    // Dummy Data
-    const reservationData = {
-      reservationCode: 1002,
-      checkinDate: "2022-07-25",
-      checkoutDate: "2022-07-27",
-      totalPrice: 60,
-      rooms: [
-        {
-          type: "double",
-          quantity: 1,
-        },
-      ],
-    };
+    if (!isValidEmail(email)) {
+      // TODO: Replace with visual component
+      console.log("Email is not Valid");
+      return;
+    }
 
-    setReservationDataHandler(reservationData);
+    if (!(RESERVATION_CODE_LENGTH == reservationCode.length)) {
+      // TODO: Replace with visual component
+      console.log("Reservation code format is not Valid");
+      return;
+    }
+
+    const response = await fetch(
+      `${API_BASE_URL}/reservation/get-details?` +
+        new URLSearchParams({
+          email: email,
+          reservationCode: reservationCode,
+        }),
+      {
+        method: "GET",
+      }
+    );
+    const jsonResponse = await response.json();
+
+    if (jsonResponse.data) {
+      setReservationDataHandler({ ...jsonResponse.data });
+      return;
+    }
+
+    console.warn(jsonResponse.error);
   };
 
   return (

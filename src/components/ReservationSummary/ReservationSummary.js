@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import classes from "./ReservationSummary.module.css";
 
@@ -12,7 +12,6 @@ const ReservationSummary = ({
   newReservation = false,
   className,
 }) => {
-  console.log("ConfirmationData: " + confirmationData);
   return (
     <Card className={`${classes.ReservationSummary} ${className}`}>
       {newReservation && <h2>Su Reserva ha sido confirmada!</h2>}

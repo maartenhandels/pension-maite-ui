@@ -19,7 +19,6 @@ const LanguagePicker = () => {
   useEffect(() => {
     const closeDropdown = (e) => {
       if (!e.composedPath().includes(TogglerBtnrRef.current)) {
-        console.log("Closing dropdown");
         setIsOpen(false);
       }
     };

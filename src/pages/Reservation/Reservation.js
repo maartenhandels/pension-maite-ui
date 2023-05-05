@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import Page from "../../containers/Page/Page";
@@ -26,24 +26,17 @@ const Reservation = () => {
   const [numberOfNights, setNumberOfNights] = useState(1);
 
   useEffect(() => {
-    getAvailableRoomTypes(
-      state ? state.checkinDate : "",
-      state ? state.checkoutDate : ""
-    );
+    if (state && state?.checkinDate != "" && state?.checkoutDate != "") {
+      console.log("Hello");
+      getAvailableRoomTypes(state.checkinDate, state.checkoutDate);
+    }
   }, []);
-
-  useEffect(() => {
-    console.log("AvailableRoomTypes length:", availableRoomTypes.length);
-    console.log("Reservation Data in RC: " + JSON.stringify(reservationData));
-  }, [availableRoomTypes, reservationData]);
 
   const incrementStep = (data) => {
     if (data) {
       setReservationData({ ...reservationData, ...data });
     }
-
     setStep(step + 1);
-    console.log(data);
   };
 
   const decrementStep = () => {
@@ -54,7 +47,6 @@ const Reservation = () => {
     // API call to backend...
     const fetchData = async () => {
       try {
-        console.log("Calling backend for available rooms...");
         const response = await fetch(
           `${API_BASE_URL}/room/get-available?` +
             new URLSearchParams({
@@ -63,18 +55,16 @@ const Reservation = () => {
             }),
           {
             method: "GET",
-            headers: {
-              "Content-Type": "application/json",
-            },
           }
         );
-        const jsonData = await response.json();
-        console.log("JsonData: " + JSON.stringify(jsonData));
-        if (jsonData.data == null) {
+        const jsonResponse = await response.json();
+        console.log("jsonResponse: " + JSON.stringify(jsonResponse));
+
+        if (jsonResponse.data == null) {
           // TODO: Show something in the frontend
           console.log("No rooms available for the requested dates");
         } else {
-          const roomTypes = jsonData.data["availableRoomTypes"].map(
+          const roomTypes = jsonResponse.data["availableRoomTypes"].map(
             (roomType) => ({
               id: roomType.roomType,
               name: roomType.roomType,
@@ -84,7 +74,7 @@ const Reservation = () => {
             })
           );
           setAvailableRoomTypes(roomTypes);
-          setNumberOfNights(jsonData.data["numberOfNights"]);
+          setNumberOfNights(jsonResponse.data["numberOfNights"]);
         }
       } catch (error) {
         console.log(error);

@@ -1,4 +1,4 @@
-export const validateEmail = (email) => {
+export const isValidEmail = (email) => {
   console.info("Checking if " + email + " is a valid email");
   return /\S+@\S+\.\S+/.test(email);
 };

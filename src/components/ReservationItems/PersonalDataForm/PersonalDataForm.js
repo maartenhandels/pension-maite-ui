@@ -9,7 +9,7 @@ import FormInput from "../../UI/FormElements/FormInput/FormInput";
 import TextArea from "../../UI/FormElements/TextArea/TexArea";
 import CheckBox from "../../UI/FormElements/CheckBox/CheckBox";
 import Button from "../../UI/Button/Button";
-import { validateEmail } from "../../../utilities/stringUtitilities";
+import { isValidEmail } from "../../../utilities/stringUtitilities";
 
 const PersonalDataForm = ({ className, onFormSubmit }) => {
   const { t } = useTranslation(null, {
@@ -56,7 +56,7 @@ const PersonalDataForm = ({ className, onFormSubmit }) => {
       lastNameRef.current.scrollIntoView();
       return false;
     }
-    if (!email || !validateEmail(email)) {
+    if (!email || !isValidEmail(email)) {
       emailRef.current.scrollIntoView();
       return false;
     }
@@ -103,7 +103,7 @@ const PersonalDataForm = ({ className, onFormSubmit }) => {
           onChangeHandler={setEmail}
           required={true}
           icon={faEnvelope}
-          isNotValid={touched && !validateEmail(email)}
+          isNotValid={touched && !isValidEmail(email)}
         />
         <FormInput
           refProp={phoneRef}
