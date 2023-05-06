@@ -10,7 +10,7 @@ import { isValidEmail } from "../../utilities/stringUtitilities";
 import { RESERVATION_CODE_LENGTH } from "../../config/config";
 import { API_BASE_URL } from "../../config/config";
 
-const MyReservationForm = ({ setReservationDataHandler }) => {
+const MyReservationForm = ({ setReservationDataHandler, setErrorHandler }) => {
   const [email, setEmail] = useState("");
   const [reservationCode, setReservationCode] = useState("");
 
@@ -19,34 +19,41 @@ const MyReservationForm = ({ setReservationDataHandler }) => {
 
     if (!isValidEmail(email)) {
       // TODO: Replace with visual component
-      console.log("Email is not Valid");
+      setErrorHandler("Email is not Valid");
       return;
     }
 
     if (!(RESERVATION_CODE_LENGTH == reservationCode.length)) {
       // TODO: Replace with visual component
-      console.log("Reservation code format is not Valid");
+      setErrorHandler(
+        `Reservation code format is not Valid. Must contain ${RESERVATION_CODE_LENGTH} characters.`
+      );
       return;
     }
 
-    const response = await fetch(
-      `${API_BASE_URL}/reservation/get-details?` +
-        new URLSearchParams({
-          email: email,
-          reservationCode: reservationCode,
-        }),
-      {
-        method: "GET",
+    try {
+      const response = await fetch(
+        `${API_BASE_URL}/reservation/get-details?` +
+          new URLSearchParams({
+            email: email,
+            reservationCode: reservationCode,
+          }),
+        {
+          method: "GET",
+        }
+      );
+      const jsonResponse = await response.json();
+
+      if (jsonResponse.data) {
+        setReservationDataHandler({ ...jsonResponse.data });
+        return;
       }
-    );
-    const jsonResponse = await response.json();
+      console.warn(jsonResponse.error);
 
-    if (jsonResponse.data) {
-      setReservationDataHandler({ ...jsonResponse.data });
-      return;
+      setErrorHandler(jsonResponse.error);
+    } catch (e) {
+      setErrorHandler("Something went wrong, please try again");
     }
-
-    console.warn(jsonResponse.error);
   };
 
   return (

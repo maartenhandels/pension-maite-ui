@@ -7,19 +7,38 @@ import PageHeader from "../../components/UI/PageHeader/PageHeader";
 import MyReservationForm from "../../components/MyReservationForm/MyReservationForm";
 import ReservationSummary from "../../components/ReservationSummary/ReservationSummary";
 import Content from "../../containers/Content/Content";
+import PopUpMessage from "../../components/UI/PopUpMessage/PopUpMessage";
 
 const MyReservation = () => {
   const [reservationData, setReservationData] = useState();
+  const [error, setError] = useState("");
+
+  const onPopUpClose = () => {
+    setError("");
+  };
 
   return (
     <Page>
       <PageHeader>Mi Reserva</PageHeader>
       <Content className={classes.Content}>
         {!reservationData && (
-          <MyReservationForm setReservationDataHandler={setReservationData} />
+          <MyReservationForm
+            setReservationDataHandler={setReservationData}
+            setErrorHandler={setError}
+          />
         )}
         {reservationData && (
-          <ReservationSummary confirmationData={reservationData} />
+          <ReservationSummary
+            className={classes.ReservationSummary}
+            confirmationData={reservationData}
+          />
+        )}
+        {error.length > 0 && (
+          <PopUpMessage
+            type="error"
+            text={error}
+            onCloseHandler={onPopUpClose}
+          />
         )}
       </Content>
     </Page>

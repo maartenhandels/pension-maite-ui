@@ -19,10 +19,13 @@ const ReservationSummary = ({
         Código de Reserva: <b>{confirmationData?.reservationId}</b>
       </h3>
       <hr />
-      <h3>Detalles:</h3>
       <div className={classes.Dates}>
-        <InfoCard>Fecha entrada: {confirmationData?.checkinDate}</InfoCard>
-        <InfoCard>Fecha salida: {confirmationData?.checkoutDate}</InfoCard>
+        <InfoCard className={classes.Date}>
+          Fecha entrada: {confirmationData?.checkinDate}
+        </InfoCard>
+        <InfoCard className={classes.Date}>
+          Fecha salida: {confirmationData?.checkoutDate}
+        </InfoCard>
       </div>
       <div className={classes.Rooms}>
         {confirmationData?.reservedRoomTypes.map((roomType, index) => {
@@ -34,10 +37,12 @@ const ReservationSummary = ({
                 className={`img-fluid ${classes.RoomImage}`}
               />
               <div className={classes.Tags}>
-                <InfoCard>
+                <InfoCard className={classes.Tag}>
                   {capitalizeFirstLetter(roomType.roomTypeName)}
                 </InfoCard>
-                <InfoCard>Cantidad: {roomType.numberOfRooms}</InfoCard>
+                <InfoCard className={classes.Tag}>
+                  Cantidad: {roomType.numberOfRooms}
+                </InfoCard>
               </div>
             </Card>
           );
