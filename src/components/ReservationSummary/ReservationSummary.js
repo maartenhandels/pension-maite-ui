@@ -48,9 +48,11 @@ const ReservationSummary = ({
           );
         })}
       </div>
-      <div className={classes.Price}>
+      <div className={classes.PriceWrapper}>
         <h3>Precio Total:</h3>
-        <InfoCard>{confirmationData?.totalPrice}€</InfoCard>
+        <InfoCard className={classes.Price}>
+          {confirmationData?.totalPrice}€
+        </InfoCard>
         <span>(El pago se realizará en la pensión)</span>
       </div>
     </Card>

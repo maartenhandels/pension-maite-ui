@@ -6,6 +6,7 @@
 @media only screen and (max-width: 1024px){
     .Content {
         width: 90%;
+        margin-bottom: 2rem;
     }
 }
 

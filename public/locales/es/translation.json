@@ -2,7 +2,7 @@
     "navBar": {
         "firstRow": {
             "myReservation": "Mi Reserva",
-            "languagePicker": "Idioma" 
+            "languagePicker": "Idioma"
         },
         "secondRow": {
             "homePage": "Inicio",
@@ -50,19 +50,28 @@
             "reviews": {
                 "section_header": "Lo que opinan nuestros clientes"
             }
-        } 
+        }
     },
     "roomsPage": {
         "roomTypes": {
             "topText": "La Pension Maite ofrece <strong>16 habitaciones</strong> adaptadas a las nuevas normativas arquitectónicas",
-            "single_title": "Single Room",
-            "single_description": "Habitación sencilla pero muy acogedora, perfecta para trabajadores y viajeros que lo que buscan es un lugar agradable donde dormir, tener una buena conexión wifi y tener baño privado. Además, dispone de escritorio y frigorífico.",
-            "twin_title": "Twin Room",
-            "double_title": "Habitacion Doble",
-            "double_description": "Habitación sencilla pero muy acogedora, perfecta para trabajadores y viajeros que lo que buscan es un lugar agradable donde dormir, tener una buena conexión wifi y tener baño privado. Además, dispone de escritorio y frigorífico.",
+            "single": "Individual",
+            "twoBeds": "Dos Camas",
+            "double": "Cama Doble",
             "triple": "Triple",
             "bottomText": "Posibilidad de habitación familiar formada por dos habitaciones, una doble y una triple, separadas del resto de la pensión por una puerta.",
             "urlText": "Contácte con nosotros."
+        },
+        "roomDescriptions": {
+            "single_title": "Habitación Individual",
+            "single_description": "Habitación sencilla pero muy acogedora, perfecta para trabajadores y viajeros que lo que buscan es un lugar agradable donde dormir, tener una buena conexión wifi y tener baño privado. Además, dispone de escritorio y frigorífico.",
+            "twin_title": "Habitación Dos Camas",
+            "twin_description": "Habitación perfecta para dos personas que buscan un lugar agradable donde dormir, tener buena conexión wifi y baño privado.",
+            "double_title": "Habitacion Doble",
+            "double_description": "Habitación ideal para parejas que buscan un lugar agradable donde dormir, tener buena conexión wifi y baño privado.",
+            "triple_title": "Habitacion Triple",
+            "triple_description": "Habitación ideal para tres personas que buscan un lugar agradable donde dormir, tener buena conexión wifi y baño privado.",
+            "RoomTypeBtnText": "Consultar Disponibilidad"
         }
     },
     "contactPage": {

@@ -20,7 +20,9 @@ const Room = ({
 }) => {
   const [quantity, setQuantity] = useState(1);
 
-  const { t } = useTranslation(null, { keyPrefix: "roomsPage.roomTypes" });
+  const { t } = useTranslation(null, {
+    keyPrefix: "roomsPage.roomDescriptions",
+  });
 
   const quantityMinValue = 1;
 

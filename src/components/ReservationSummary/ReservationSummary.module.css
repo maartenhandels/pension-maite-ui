@@ -1,6 +1,7 @@
 .ReservationSummary {
     width: 80%;
     margin: auto;
+    margin-top: 2rem;
     padding: 2rem;
 }
 
@@ -62,23 +63,31 @@
     flex: 1 1 0;
 }
 
-.Price {
+.PriceWrapper {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
+.Price {
+    padding: .75rem 2rem;
+}
+
 @media only screen and (max-width: 1025px) {
+    .ReservationSummary {
+        width: 100%;
+        padding: 1rem;
+    }
+
 	.Dates {
         gap: 1rem;
         justify-content: center;
-
     }
-    .Date {
-        flex: 1 1 70%; 
-    }
+    .Date { flex: 1 1 70%; }
 
     .Card { min-width: 20rem; }
+
+    .Rooms { max-width: 100%; }
     
     .Room {  
         flex-basis: 100%; /* set flex-basis to 100% on smaller devices */
@@ -86,9 +95,12 @@
         min-width: 0;
         justify-content: center;
         align-items: center;
+        padding: 1rem;
     }
 
-    .Rooms {
-        max-width: 100%;
-    }
+    .RoomImage { max-width: 100%; }
+
+    .Tag { padding: .5rem; }
+
+    .Price { padding: .75rem 1rem; }
 }

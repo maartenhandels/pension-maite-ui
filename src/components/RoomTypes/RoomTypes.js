@@ -13,19 +13,19 @@ const RoomTypes = () => {
 
   const roomTypes = [
     {
-      imagePath: Config.SingleRoomImagePath,
+      imagePath: Config.SingleRoomRoundImagePath,
       imageText: t("single"),
     },
     {
-      imagePath: Config.TwoBedsRoomImagePath,
+      imagePath: Config.TwoBedsRoomRoundImagePath,
       imageText: t("twoBeds"),
     },
     {
-      imagePath: Config.DoubleRoomImagePath,
+      imagePath: Config.DoubleRoomRoundImagePath,
       imageText: t("double"),
     },
     {
-      imagePath: Config.TripleRoomImagePath,
+      imagePath: Config.TripleRoomRoundImagePath,
       imageText: t("triple"),
     },
   ];

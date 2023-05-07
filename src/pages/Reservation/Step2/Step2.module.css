@@ -23,8 +23,16 @@
     padding: 1.5rem;
 }
 
-
-
 .SideBar {
     width: 30%;
+}
+
+@media only screen and (max-width: 1024px){
+    .Content {
+        flex-direction: column;
+    }
+
+    .Step2, .PersonalDataForm, .SideBar {
+        width: 100%;
+    }
 }

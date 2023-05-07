@@ -30,6 +30,10 @@
     min-width: 20%;
 }
 
+.Price > h5 {
+    font-weight: bold;
+}
+
 .SecondRow {
     align-items: center;
     justify-content: flex-end;
@@ -80,4 +84,51 @@
     background-color: var(--primary-color);
     color: white;
     height: 3rem;
+}
+
+@media only screen and (max-width: 1025px) {
+    .FirstRow {
+       flex-direction: column;
+       align-items: center;
+    }
+
+    .Image {
+        max-width: 100%;
+    }
+
+    .Info {
+        align-items: center;
+        margin: .5rem;
+        margin-top: 1rem;
+    }
+    .Info > p {
+        margin: 0;
+    }
+
+    .Price {
+        align-self: center;
+        margin: 0;
+    }
+
+    .SecondRow {
+        gap: .5rem;
+        justify-content: space-evenly;
+        margin-top: .5rem;
+    }
+
+    .Capacity, .Counter, .AddBtn {
+        margin: 0;
+        padding: 0;
+    }
+
+    .Capacity {
+        width: 20%;
+    }
+
+    .Counter, .AddBtn {
+        width: 40%;
+        max-width: 12rem;
+    }
+
+
 }

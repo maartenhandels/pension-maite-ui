@@ -11,3 +11,14 @@
     margin: 1rem 0;
     align-self: baseline;
 }
+
+@media only screen and (max-width: 1025px) {
+	.RoomPicker {
+		flex-direction: column;
+	}
+
+    .SideBar {
+        width: 100%;
+        margin-bottom: 0;
+    }
+}

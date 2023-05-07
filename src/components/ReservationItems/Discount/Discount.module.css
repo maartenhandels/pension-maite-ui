@@ -30,6 +30,7 @@
 
 .Input input {
     width: 55%;
+    height: 3rem;
     /* margin-right: 1rem; */
 }
 
@@ -37,6 +38,7 @@
     width: 40%;
     padding-left: 1rem;
     padding-right: 1rem;
+    height: 3rem;
     color: white;
     background-color: var(--primary-color);
     font-weight: bold;

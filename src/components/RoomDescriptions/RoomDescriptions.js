@@ -1,33 +1,42 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
+
 import RoomDescription from "./RoomDescription/RoomDescription";
 
 import classes from "./RoomDescriptions.module.css";
 
+import {
+  SingleRoomImagePath,
+  TwoBedsRoomImagePath,
+  DoubleRoomImagePath,
+  TripleRoomImagePath,
+} from "../../config/config";
+
 const RoomDescriptions = () => {
+  const { t } = useTranslation(null, {
+    keyPrefix: "roomsPage.roomDescriptions",
+  });
+
   const roomDescriptions = [
     {
-      roomType: "Individual",
-      roomDescription:
-        "Habitación sencilla pero muy acogedora, perfecta para trabajadores y viajeros que lo que buscan es un lugar agradable donde dormir, tener una buena conexión wifi y tener baño privado. Además, dispone de escritorio y frigorífico.",
-      roomImagePath: "images/rooms/single.jpg",
+      roomType: t("single_title"),
+      roomDescription: t("single_description"),
+      roomImagePath: SingleRoomImagePath,
     },
     {
-      roomType: "Dos camas",
-      roomDescription:
-        "Habitación perfecta para dos personas que buscan un lugar agradable donde dormir, tener buena conexión wifi y baño privado.",
-      roomImagePath: "images/rooms/two-beds.jpg",
+      roomType: t("twin_title"),
+      roomDescription: t("twin_description"),
+      roomImagePath: TwoBedsRoomImagePath,
     },
     {
-      roomType: "Matrimonio",
-      roomDescription:
-        "Habitación ideal para parejas que buscan un lugar agradable donde dormir, tener buena conexión wifi y baño privado.",
-      roomImagePath: "images/rooms/double.jpg",
+      roomType: t("double_title"),
+      roomDescription: t("double_description"),
+      roomImagePath: DoubleRoomImagePath,
     },
     {
-      roomType: "Triple",
-      roomDescription:
-        "Habitación ideal para tres personas que buscan un lugar agradable donde dormir, tener buena conexión wifi y baño privado.",
-      roomImagePath: "images/rooms/triple.jpg",
+      roomType: t("triple_title"),
+      roomDescription: t("triple_description"),
+      roomImagePath: TripleRoomImagePath,
     },
   ];
 

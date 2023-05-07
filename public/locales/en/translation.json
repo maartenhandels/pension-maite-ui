@@ -2,7 +2,7 @@
     "navBar": {
         "firstRow": {
             "myReservation": "My Reservation",
-            "languagePicker": "Language" 
+            "languagePicker": "Language"
         },
         "secondRow": {
             "homePage": "Home",
@@ -55,14 +55,23 @@
     "roomsPage": {
         "roomTypes": {
             "topText": "The pension Maite offers <strong>16 rooms</strong> adapted to the latest architecture standards",
-            "single_title": "Single Room",
-            "single_description": "Habitación sencilla pero muy acogedora, perfecta para trabajadores y viajeros que lo que buscan es un lugar agradable donde dormir, tener una buena conexión wifi y tener baño privado. Además, dispone de escritorio y frigorífico.",
-            "twin_title": "Twin Room",
-            "double_title": "Double Room",
-            "double_description": "Habitación sencilla pero muy acogedora, perfecta para trabajadores y viajeros que lo que buscan es un lugar agradable donde dormir, tener una buena conexión wifi y tener baño privado. Además, dispone de escritorio y frigorífico.",
+            "single": "Single",
+            "twoBeds": "Two Beds",
+            "double": "Double",
             "triple": "Triple",
             "bottomText": "Possibility of a family room consisting of two rooms, one double and one triple, separated from the rest of the guesthouse by a door.",
             "urlText": "Contact us"
+        },
+        "roomDescriptions": {
+            "single_title": "Single Room",
+            "single_description": "Habitación sencilla pero muy acogedora, perfecta para trabajadores y viajeros que lo que buscan es un lugar agradable donde dormir, tener una buena conexión wifi y tener baño privado. Además, dispone de escritorio y frigorífico.",
+            "twin_title": "Twin Room",
+            "twin_description": "Twin Room",
+            "double_title": "Double Room",
+            "double_description": "Habitación sencilla pero muy acogedora, perfecta para trabajadores y viajeros que lo que buscan es un lugar agradable donde dormir, tener una buena conexión wifi y tener baño privado. Además, dispone de escritorio y frigorífico.",
+            "triple_title": "Triple",
+            "triple_description": "Habitación ideal para tres personas que buscan un lugar agradable donde dormir, tener buena conexión wifi y baño privado.",
+            "RoomTypeBtnText": "Check availability"
         }
     },
     "contactPage": {
