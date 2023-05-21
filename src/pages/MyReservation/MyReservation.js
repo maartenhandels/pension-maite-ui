@@ -29,7 +29,7 @@ const MyReservation = () => {
         )}
         {reservationData && (
           <ReservationSummary
-            className={classes.ReservationSummary}
+            className={classes.MyReservationSummary}
             confirmationData={reservationData}
           />
         )}

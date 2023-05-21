@@ -5,6 +5,12 @@
     justify-content: center;
 }
 
-.ReservationSummary {
+.MyReservationSummary {
     width: 100%;
+}
+
+@media only screen and (max-width: 1025px) {
+    .MyReservationSummary {
+        margin-top: 0;
+    }
 }
